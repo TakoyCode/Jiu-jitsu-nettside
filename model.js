@@ -52,7 +52,7 @@ const model = {
                         name: "økt 3",
                         level: "2 kyu",
                         description: "uke 1 fokus",
-                        media: [model.media[0], model.media[1]],
+                        videos: [model.media[0], model.media[1]],
                     },
                 ],
             }
@@ -60,7 +60,7 @@ const model = {
 
         categories: ["front", "bak", "bakke", "kata"],
 
-        media: [
+        vidoes: [
             {
                 name: "Teknikknavn",
                 masteryLevel: 1,
