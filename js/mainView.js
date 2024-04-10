@@ -6,4 +6,5 @@ function mainView() {
         <div>Test</div>
     
     `;
+    app.innerHTML = html;
 }
