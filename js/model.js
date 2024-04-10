@@ -27,8 +27,8 @@ const model = {
 
     data: {
 
-        clickedBelt: 1,
-        beltCategoryOpen: true,
+        clickedBelt: null,
+        beltCategoryOpen: false,
 
         users: [
             {

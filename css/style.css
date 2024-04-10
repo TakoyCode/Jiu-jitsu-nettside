@@ -2,6 +2,7 @@ body {
     background-color: rgb(69, 69, 69);
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }
 
 .navBar {
@@ -74,10 +75,12 @@ body {
     font-weight: bold;
 }
 .beltBoxMain{
+    height: 1rem;
     border: solid 0.2rem;
     padding: 0.5rem;
     cursor: pointer;
 }
+
 .yellowBelt{
 color: rgb(227, 194, 9);
 background-color: rgb(255, 242, 170);
@@ -97,4 +100,14 @@ background-color:  rgb(176, 216, 252);
 .brownBelt{
 color: rgb(165, 99, 42);
 background-color: rgb(214, 180, 150);
+}
+
+.technique-redirect {
+    color: currentColor;
+    filter: brightness(80%);
+
+}
+
+.selectedBelt {
+    height: auto;
 }

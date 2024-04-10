@@ -13,11 +13,22 @@ app.innerHTML = html;
 function createBeltHtml(){
     return /*html*/`
     <div class ="beltContainerMain">
-    <div class="beltBoxMain yellowBelt" onclick="">5.kyu - Gult belte</div>
-    <div class="beltBoxMain orangeBelt" onclick="">4.kyu - Oransje belte</div>
-    <div class="beltBoxMain greenBelt" onclick="">3.kyu - Grønt belte</div>
-    <div class="beltBoxMain blueBelt" onclick="">2.kyu - Blått belte</div>
-    <div class="beltBoxMain brownBelt" onclick="">1.kyu - Brunt belte</div>
+        <div class="beltBoxMain yellowBelt ${model.data.clickedBelt == 1 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(1)">5.kyu - Gult belte
+        ${model.data.clickedBelt == 1 ? createDropdownBeltHtml("belt1") : ""}
+        </div>
+
+    <div class="beltBoxMain orangeBelt ${model.data.clickedBelt == 2 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(2)">4.kyu - Oransje belte
+    ${model.data.clickedBelt == 2 ? createDropdownBeltHtml("belt2") : ""}
+    </div>
+    <div class="beltBoxMain greenBelt ${model.data.clickedBelt == 3 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(3)">3.kyu - Grønt belte
+    ${model.data.clickedBelt == 3 ? createDropdownBeltHtml("belt3") : ""}
+    </div>
+    <div class="beltBoxMain blueBelt ${model.data.clickedBelt == 4 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(4)">2.kyu - Blått belte
+    ${model.data.clickedBelt == 4 ? createDropdownBeltHtml("belt4") : ""}
+    </div>
+    <div class="beltBoxMain brownBelt ${model.data.clickedBelt == 5 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(5)">1.kyu - Brunt belte
+    ${model.data.clickedBelt == 5 ? createDropdownBeltHtml("belt5") : ""}
+    </div>
     </div>
 `;
 }
