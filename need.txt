@@ -1,0 +1,5 @@
+
+Trenger tracking på beherskelses nivå per teknikkVIDEO,
+mulighet til å endre dette i vis teknikk view
+
+Prosent utregning osv.. inngår i dette, så tracking og teknikk view må være på plass før.
