@@ -82,7 +82,7 @@ body {
 }
 
 .yellowBelt{
-color: rgb(227, 194, 9);
+color: rgb(201, 172, 8);
 background-color: rgb(255, 242, 170);
 }
 .orangeBelt{
@@ -104,10 +104,18 @@ background-color: rgb(214, 180, 150);
 
 .technique-redirect {
     color: currentColor;
-    filter: brightness(80%);
+    filter: brightness(115%);
+    animation: fadeIn 0.3s;
 
 }
 
 .selectedBelt {
     height: auto;
+}
+
+@keyframes fadeIn {
+
+0%{opacity: 0;}
+100%{opacity: 1;}
+
 }

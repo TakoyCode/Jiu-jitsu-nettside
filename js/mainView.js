@@ -32,3 +32,14 @@ function createBeltHtml(){
     </div>
 `;
 }
+
+
+function createDropdownBeltHtml(belt) {
+
+    return /*HTML*/`
+    <p class="technique-redirect" onclick="goToPage('${belt}front')"> Front</p>
+    <p class="technique-redirect" onclick="goToPage('${belt}behind')">Bak</p>
+    <p class="technique-redirect" onclick="goToPage('${belt}ground')"> Bakke</p>
+    <p class="technique-redirect" onclick="goToPage('${belt}kata')"> Kata</p>
+`;
+}
