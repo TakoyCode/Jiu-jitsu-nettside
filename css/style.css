@@ -143,3 +143,29 @@ body {
     align-items: center;
     width: auto;
 }
+
+.createSessionInputContainer {
+    height: 30rem;
+    width: 30rem;
+    background-color: antiquewhite;
+}
+
+.createSessionInputContainer>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem;
+}
+
+.createSessionInputContainer>div>button {
+    margin-top: 3rem;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 2rem;
+
+    border: 0.1rem solid black;
+    color: rgb(0, 160, 175);
+    background-color: rgb(183, 183, 183);
+}
