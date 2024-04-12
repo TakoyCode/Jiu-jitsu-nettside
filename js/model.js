@@ -2,7 +2,7 @@
 const model = {
 
     app: {
-        currentPage: "techniqueView",
+        currentPage: null,
         user: "Meg",
     },
 

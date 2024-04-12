@@ -14,8 +14,8 @@ function createNavBar() {
     
     <div class="navBar">
         <div class="navButtonHolder">
-            <button>Main</button>
-            <button>Økter</button>
+            <button onclick="goToPage(null)">Main</button>
+            <button onclick="goToPage('sessionView')">Økter</button>
         </div>
         <div class="progressBarContainer">
             <div class="beltLevel">2</div>
