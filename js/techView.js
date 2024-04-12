@@ -17,7 +17,6 @@ function techniqueView() {
                 </div>
             </div>
             <div class="centerElements">
-                <hr style="width: 20%"/>
                     <div>*teknikknavn*</div>
                     <div onclick="changeLevel()">Beherskelsesnivå : 🟥</div>
                     <video width="30%" controls style="border-radius: 1.5rem">
