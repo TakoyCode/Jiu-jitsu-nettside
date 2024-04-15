@@ -143,3 +143,28 @@ body {
     align-items: center;
     width: auto;
 }
+
+.sessionViewBox{
+    display: flex;
+    justify-content: center;
+    border: solid 0.1rem;
+    width: 20rem;
+    padding: 2rem;
+}
+.sessionViewContainer{
+    display:grid;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: large;
+}
+.sessionViewHeader{
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+}
+.sessionViewBtn{
+    margin-left: 58.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
