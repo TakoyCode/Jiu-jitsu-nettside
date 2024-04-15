@@ -166,6 +166,46 @@ body {
     margin-bottom: 2rem;
     cursor: pointer;
 }
+.chosenSessionBox {
+    display: flex;
+    justify-content: center;
+}
+
+.chosenSessionContainer {
+    display: grid;
+    justify-content: center;
+    cursor: pointer;
+    font-size: large;
+    border: solid 0.1rem;
+    width:30rem;
+    height:15rem;
+    padding: 0.5rem;
+    margin-left: 32rem;
+    margin-top: 2rem;
+
+}
+
+.chosenSessionHeader {
+    margin-top: 2rem;
+    display: grid;
+    justify-content: center;
+}
+
+.chosenSessionBtn {
+    margin-left: 58.5rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+.chosenSessionBtnBack{
+    position: absolute;
+    margin-bottom: 2rem;
+    cursor: pointer; 
+}
+.chosenSessionSlide{
+    width: 8rem;
+    height: 2rem;
+    margin-left: 1rem;
+}
 
 .centerElements {
     display: flex;
