@@ -23,15 +23,18 @@ function createSessionHtml() {
             <div class="createSessionInputContainer">
                 <div class="createSessionInputDiv">
                     <label>Øktnavn:</label>
-                    <input>
+                    <input oninput="model.inputs.session.name = this.value"
+                    value = "${model.inputs.session.name ?? ""}">
                 </div>
                 <div class="createSessionInputDiv">
                     <label>Beltenivå:</label>
-                    <input>
+                    <input oninput="model.inputs.session.level = this.value"
+                    value = "${model.inputs.session.level ?? ""}">
                 </div>
                 <div class="createSessionInputDiv">
                     <label>Beskrivelse:</label>
-                    <input>
+                    <input oninput="model.inputs.session.description = this.value"
+                        value = "${model.inputs.session.description ?? ""}">
                 </div>
             </div>
             <div class="createSessionAddVideoContainer">
@@ -39,8 +42,8 @@ function createSessionHtml() {
                 <div class="createSessionAddVideo" onclick="createSelVideosView();">+</div>
             </div>
             <div class="createSessionInputDiv">
-                <button>Tilbake</button>
-                <button>Legg til økt</button>
+                <button onclick="goToPage('sessionView')">Tilbake</button>
+                <button onclick="addSession()">Legg til økt</button>
             </div>
         </div>
     

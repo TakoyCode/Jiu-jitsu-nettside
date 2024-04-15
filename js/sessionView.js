@@ -1,5 +1,5 @@
 
-function sessionView(){
+function sessionView() {
     const app = document.getElementById("app")
     let html = "";
     html += /*HTML*/`
@@ -15,5 +15,5 @@ function sessionView(){
     <div class ="sessionViewBox" onclick="">Økt 3</div>
 </div>
     `;
-app.innerHTML = html;
+    app.innerHTML = html;
 }

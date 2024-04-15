@@ -13,10 +13,10 @@ const model = {
         },
 
         session: {
-            name: "økt 1",
-            level: "2 kyu",
-            description: "uke 1 fokus",
-            media: [/* model.media[0], model.media[1] */],
+            name: null,
+            level: null,
+            description: null,
+            media: [],
         },
 
         selectedSession: {
