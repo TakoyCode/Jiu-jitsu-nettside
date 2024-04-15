@@ -131,12 +131,6 @@ body {
 
 }
 
-.centerElements {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .techniqueContainer {
     display: flex;
     flex-direction: column;
@@ -144,27 +138,91 @@ body {
     width: auto;
 }
 
-.sessionViewBox{
+.sessionViewBox {
     display: flex;
     justify-content: center;
     border: solid 0.1rem;
     width: 20rem;
     padding: 2rem;
 }
-.sessionViewContainer{
-    display:grid;
+
+.sessionViewContainer {
+    display: grid;
     justify-content: center;
     gap: 1rem;
     cursor: pointer;
     font-size: large;
 }
-.sessionViewHeader{
+
+.sessionViewHeader {
     margin-top: 2rem;
     display: grid;
     justify-content: center;
 }
-.sessionViewBtn{
+
+.sessionViewBtn {
     margin-left: 58.5rem;
     margin-bottom: 2rem;
     cursor: pointer;
+}
+
+.centerElements {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.createSessionWrapper {
+    background-color: rgb(238, 238, 238);
+    height: auto;
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.createSessionInputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.createSessionInputDiv {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.createSessionInputDiv>button {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: 0.1rem solid black;
+}
+
+
+.createSessionAddVideoContainer {
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.createSessionAddVideo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.1rem solid black;
+}
+
+.createSessionTittle {
+    display: flex;
+    justify-content: start;
+    margin: 2rem;
+    gap: 1rem;
 }
