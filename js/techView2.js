@@ -39,10 +39,10 @@ function techniqueView() {
     </div>
               
     `;
-    app.innerHTML = html;
+    return html;
 }
 
-function seeFront(index){
+function seeFront(){
     let html = "";
     html += /*HTML*/ `
     <div class="centerElements">
@@ -52,6 +52,39 @@ function seeFront(index){
     </div>
     `;
 
+}
+
+function seeBak(){
+    let html = "";
+    html += /*HTML*/ `
+    <div class="centerElements">
+    <div>Navn: ${techArrays.name}</div>
+    <div>Video: ${techArrays.videos}</div>
+
+    </div>
+    `;
+}
+
+function seeBakke(){
+    let html = "";
+    html += /*HTML*/ `
+    <div class="centerElements">
+    <div>Navn: ${techArrays.name}</div>
+    <div>Video: ${techArrays.videos}</div>
+
+    </div>
+    `;
+}
+
+function seeKata(){
+    let html = "";
+    html += /*HTML*/ `
+    <div class="centerElements">
+    <div>Navn: ${techArrays.name}</div>
+    <div>Video: ${techArrays.videos}</div>
+
+    </div>
+    `;
 }
 
 function techLoopHtml(){
