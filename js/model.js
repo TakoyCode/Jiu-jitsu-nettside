@@ -2,7 +2,7 @@
 const model = {
 
     app: {
-        currentPage: null,
+        currentPage: "createSessionView",
         user: "Meg",
     },
 

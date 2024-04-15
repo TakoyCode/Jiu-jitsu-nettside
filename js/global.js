@@ -1,6 +1,11 @@
 function updateView() {
     if (model.app.currentPage == null || model.app.currentPage == "mainPage") mainView();
+<<<<<<< HEAD
     else if (model.app.currentPage == "sessionView") sessionView();
+=======
+    else if (model.app.currentPage == "sessionView") SessionView();
+    else if (model.app.currentPage == "createSessionView") createSessionView();
+>>>>>>> 161290a179ac9d8c8d8445e12c160199b53a7819
     else if (model.app.currentPage == "techniqueView") techniqueView();
 }
 
