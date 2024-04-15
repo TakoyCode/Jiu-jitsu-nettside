@@ -7,7 +7,7 @@ function sessionView(){
     <h1 class="sessionViewHeader">Egne økter</h1>
     <hr style="width: 20%"/>
 
-    <button class="sessionViewBtn" onclick="">+</button>
+    <button class="sessionViewBtn" onclick="goToPage('createSessionView')">+</button>
     
     <div class="sessionViewContainer">
     <div class ="sessionViewBox" onclick="">Økt 1</div>

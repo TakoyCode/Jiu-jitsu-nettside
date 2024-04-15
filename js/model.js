@@ -60,12 +60,12 @@ const model = {
 
         categories: ["front", "bak", "bakke", "kata"],
 
-        vidoes: [
+        videos: [
             {
                 name: "Teknikknavn",
                 masteryLevel: 1,
                 categories: [/* model.categories[1] */],
-                mediaPath: "catKungfu.video",
+                mediaPath: "placeholder.mp4",
             },
             {
                 name: "Teknikknavn",

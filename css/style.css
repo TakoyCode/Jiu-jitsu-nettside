@@ -3,6 +3,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
+    overflow: hidden;
 }
 
 .navBar {
@@ -225,4 +226,119 @@ body {
     justify-content: start;
     margin: 2rem;
     gap: 1rem;
+}
+
+.addVideoBlur { 
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    backdrop-filter: blur(3px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.videoSelContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: goldenrod;
+    height: 50rem;
+    width: 90rem;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 60px 30px hsla(0, 0%, 0%, 0.162);
+    
+
+}
+
+.selVideoFilter {
+    align-self: center;
+    display: flex;
+    margin-top: 2%;
+    height: auto;
+    width: 500px;
+    border: 1px hsla(0, 0%, 0%, 0.281) solid;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 1rem;
+}
+
+.sortIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    
+}
+
+.sortIcon:hover {
+    scale: 1.1;
+
+}
+
+p {
+    display: flex;
+    align-content: center;
+
+}
+
+.vidPreview {
+    width: 25rem;
+    height: 20rem;
+
+}
+
+.vidPreviewContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+
+}
+
+#teknikKategori {
+    border: none;
+    background-color: none;
+
+}
+
+.selectVidPageContainer {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-self: center;
+
+}
+
+.vidPageGoLeft {
+    transform: scaleX(-1);
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+.vidPageGoRight {
+    width: 1.5rem;
+    height: 1.5rem;
+
+}
+
+.currentVidSelPage {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    align-self: center;
+    scale: 1.5;
+
+}
+
+.vidPageGoRight:hover {
+    scale: 1.2;
+
+}
+
+.vidPageGoLeft:hover {
+    scale: 1.2;
+
 }
