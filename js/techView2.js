@@ -1,48 +1,58 @@
 let techArrays = [
-front = [
-    {
-        name: "Front1",
-        videos: [model.data.vidoes[1], model.data.vidoes[2]]
-    }
-],
-bak = [
-    {
-        name: "Bak1",
-        videos: [model.data.vidoes[1], model.data.vidoes[2]]
-    }
-],
-bakke = [
-    {
-        name: "Bakke1",
-        videos: [model.data.vidoes[1], model.data.vidoes[2]]
-    }
-],
-kata = [
-    {
-        name: "Kata1",
-        videos: [model.data.vidoes[1], model.data.vidoes[2]]
-    }
-]
-
+    front = [
+        {
+            name: "Front1",
+            videos: [model.data.videos[1], model.data.videos[2]]
+        }
+    ],
+    bak = [
+        {
+            name: "Bak1",
+            videos: [model.data.videos[1], model.data.videos[2]]
+        }
+    ],
+    bakke = [
+        {
+            name: "Bakke1",
+            videos: [model.data.videos[1], model.data.videos[2]]
+        }
+    ],
+    kata = [
+        {
+            name: "Kata1",
+            videos: [model.data.videos[1], model.data.videos[2]]
+        }
+    ]
 ];
 
 let chosenTechIndex = 0;
 
-techniqueView()
 function techniqueView() {
     const app = document.getElementById("app");
     let html = '';
     html += /*HTML*/ `
     <div class="centerElements">
-    ${createNavBar()}
-    ${techLoopHtml()}
+        ${createNavBar()}
+        ${seeFront()}
     </div>
               
+    `;
+    app.innerHTML = html;
+}
+
+function seeFront() {
+    let html = "";
+    let front = techArrays[0];
+    html += /*HTML*/ `
+    <div class="centerElements">
+        <div>Navn: ${front[0].name}</div>
+        <div>Video: ${front[0].name}</div>
+    </div>
     `;
     return html;
 }
 
-function seeFront(){
+function seeBak() {
     let html = "";
     html += /*HTML*/ `
     <div class="centerElements">
@@ -51,10 +61,10 @@ function seeFront(){
 
     </div>
     `;
-
+    return html;
 }
 
-function seeBak(){
+function seeBakke() {
     let html = "";
     html += /*HTML*/ `
     <div class="centerElements">
@@ -63,9 +73,10 @@ function seeBak(){
 
     </div>
     `;
+    return html;
 }
 
-function seeBakke(){
+function seeKata() {
     let html = "";
     html += /*HTML*/ `
     <div class="centerElements">
@@ -74,32 +85,21 @@ function seeBakke(){
 
     </div>
     `;
+    return html;
 }
 
-function seeKata(){
+function techLoopHtml() {
     let html = "";
-    html += /*HTML*/ `
-    <div class="centerElements">
-    <div>Navn: ${techArrays.name}</div>
-    <div>Video: ${techArrays.videos}</div>
 
-    </div>
-    `;
-}
-
-function techLoopHtml(){
-let html = "";
-
-for (let i = 0; i < techArrays.length; i++){
-    html += `
-    <div onclick="seeFront"(${i})>${techArrays[0]}</div>
-    <div onclick="seeBak(${i})">${techArrays[1]}</div>
-    <div onclick="seeBakke(${i})">${techArrays[2]}</div>
-    <div onclick="seeKata(${i})">${techArrays[3]}</div>
+    for (let i = 0; i < techArrays.length; i++) {
+        html += `
+        <div onclick="seeFront"(${i})>${techArrays[0]}</div>
+        <div onclick="seeBak(${i})">${techArrays[1]}</div>
+        <div onclick="seeBakke(${i})">${techArrays[2]}</div>
+        <div onclick="seeKata(${i})">${techArrays[3]}</div>
     `;
 
-}
-return html;
+    }
+    return html;
 }
 
-   

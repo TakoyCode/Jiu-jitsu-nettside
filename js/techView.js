@@ -1,6 +1,3 @@
-
-
-
 function techniqueView() {
     const app = document.getElementById("app");
     let html = "";

@@ -61,12 +61,12 @@ function createSelVideosView() {
         ${createSelVideosHTML()}
         </div>
         `;
-    
-        app.innerHTML = html;
+
+    app.innerHTML = html;
 }
 
 function createSelVideosHTML() {
-    
+
     return /*html*/`
     <div class="addVideoBlur">
     <button onclick="goToPage('createSessionView')">BACK - Placeholder</button>
