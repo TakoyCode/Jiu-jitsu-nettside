@@ -1,13 +1,17 @@
 
+
+
 function techniqueView() {
     const app = document.getElementById("app");
     let html = "";
     html += /*HTML*/ `
     <div class="centerElements">
         ${createNavBar()}
-        <div class="centerElements">
-            <div><strong>Teknikk 1</strong></div>
-            <div class="centerElements">
+
+        
+          <div class="centerElements">
+            <div><strong>Front</strong></div>
+            <div class="centerElements">onclick="${seeTechHtml()}"</div> 
                 <hr style="width: 20%"/>
                     <div>*teknikknavn*</div>
                     <div onclick="changeLevel()">Beherskelsesnivå : 🟥</div>
@@ -25,9 +29,11 @@ function techniqueView() {
                 </div>
             </div>
         </div>
-    `;
+    `
     app.innerHTML = html;
 }
+
+
 
 
 
