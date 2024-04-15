@@ -14,27 +14,31 @@ function createSessionView() {
 
 function createSessionHtml() {
     return /*Html*/ `
-    
-        <div>Opprett økt</div>
-        <hr/>   
-        <div class="createSessionInputContainer centerElements">
-            <div>
-                <label>Øktnavn: </label>
-                <input>
+
+        <div class="createSessionTittle centerElements">
+            <div>Opprett økt</div>
+            <hr style="width: 30rem;"/>   
+        </div>
+        <div class="createSessionWrapper">
+            <div class="createSessionInputContainer">
+                <div class="createSessionInputDiv">
+                    <label>Øktnavn:</label>
+                    <input>
+                </div>
+                <div class="createSessionInputDiv">
+                    <label>Beltenivå:</label>
+                    <input>
+                </div>
+                <div class="createSessionInputDiv">
+                    <label>Beskrivelse:</label>
+                    <input>
+                </div>
             </div>
-            <div>
-                <label>Beltenivå</label>
-                <input>
+            <div class="createSessionAddVideoContainer">
+                <label>Teknikk-videoer: </label>
+                <div class="createSessionAddVideo">+</div>
             </div>
-            <div>
-                <label>Beskrivelse</label>
-                <input>
-            </div>
-            <div>
-                <label>Teknikk-videoer:</label>
-                <div>+</div>
-            </div>
-            <div>
+            <div class="createSessionInputDiv">
                 <button>Tilbake</button>
                 <button>Legg til økt</button>
             </div>
