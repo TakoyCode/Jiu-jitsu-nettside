@@ -2,8 +2,9 @@
 const model = {
 
     app: {
-        currentPage: null,
+        currentPage: "techniqueView",
         user: "Meg",
+        currentTechnique: 'Bakke1'
     },
 
     inputs: {
@@ -26,7 +27,6 @@ const model = {
     },
 
     data: {
-
         clickedBelt: null,
         beltCategoryOpen: false,
 
@@ -40,22 +40,45 @@ const model = {
                         name: "økt 1",
                         level: "2 kyu",
                         description: "uke 1 fokus",
-                        media: [/* model.media[0], model.media[1] */],
+                        media: [0, 1],
                     },
                     {
                         name: "økt 2",
                         level: "2 kyu",
                         description: "uke 1 fokus",
-                        media: [/* model.media[0], model.media[1] */],
+                        media: [0, 1],
                     },
                     {
                         name: "økt 3",
                         level: "2 kyu",
                         description: "uke 1 fokus",
-                        videos: [/* model.media[0], model.media[1] */],
+                        videos: [0, 1],
                     },
                 ],
             }
+        ],
+
+        techniques: [
+            {
+                name: "Front1",
+                level: 1,
+                videos: [1, 2],
+            },
+            {
+                name: "Bak1",
+                level: 1,
+                videos: [1, 2]
+            },
+            {
+                name: "Bakke1",
+                level: 1,
+                videos: [1, 2]
+            },
+            {
+                name: "Kata1",
+                level: 1,
+                videos: [1, 2]
+            },
         ],
 
         categories: ["front", "bak", "bakke", "kata"],
@@ -64,12 +87,12 @@ const model = {
             {
                 name: "Teknikknavn",
                 masteryLevel: 1,
-                categories: [/* model.categories[1] */],
+                categories: [1],
                 mediaPath: "placeholder.mp4",
             },
             {
                 name: "Teknikknavn",
-                categories: [/* model.categories[1] */],
+                categories: [1],
                 masteryLevel: 1,
                 mediaPath: "bearFighting.video",
             }
