@@ -144,13 +144,20 @@ body {
 
 }
 
+
 .techniqueContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 50%;
     border: 4px solid black;
-    background-color: rgb(116, 56, 66);
+    background-color: rgb(160, 94, 94);
     border-radius: 3%;
+    font-size: larger;
+    cursor: pointer;
+
+
+
 }
 
 .sessionViewBox {

@@ -62,22 +62,22 @@ const model = {
             {
                 name: "Front1",
                 level: 1,
-                videos: [1, 2],
+                videos: [0, 1],
             },
             {
                 name: "Bak1",
                 level: 1,
-                videos: [1, 2]
+                videos: [0, 1]
             },
             {
                 name: "Bakke1",
                 level: 1,
-                videos: [1, 2]
+                videos: [0, 1]
             },
             {
                 name: "Kata1",
                 level: 1,
-                videos: [1, 2]
+                videos: [0, 1]
             },
         ],
 
@@ -85,17 +85,17 @@ const model = {
 
         videos: [
             {
-                name: "Teknikknavn",
+                name: "Teknikknavn1",
                 masteryLevel: 1,
                 categories: [1],
                 mediaPath: "placeholder.mp4",
             },
             {
-                name: "Teknikknavn",
-                categories: [1],
+                name: "Teknikknavn2",
                 masteryLevel: 1,
-                mediaPath: "bearFighting.video",
-            }
+                categories: [1],
+                mediaPath: "placeholder.mp4",
+            },
         ],
     },
 };

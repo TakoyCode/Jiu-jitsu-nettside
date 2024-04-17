@@ -4,7 +4,7 @@ function techniqueView() {
     let html = /*HTML*/ `
         ${createNavBar()}
         <div>${technique.name}</div>
-        <div>${technique}</div>
+        <hr/>
         ${createTechniqueVideoshtml()}
     `;
     app.innerHTML = html;
@@ -19,15 +19,16 @@ function createTechniqueVideoshtml() {
         <div class="techniqueContainer">
             <div>VIDEO NAVN</div>
             </div>
-                <div class="techniqueContainer">
-                <div>Beherskelses nivå: ${getLevelEmoji(technique.level)}</div>
+            <div class="techniqueContainer">
+                <div>Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}</div>
                 <video width="200rem" controls>
-                    <source src="${model.data.videos[technique.videos[i]]}">
+                    <source src="${model.data.videos[technique.videos[i]].mediaPath}">
                 </video>
             </div>
+        </div>    
     `;
-        return html;
     }
+    return html;
 }
 
 function getLevelEmoji(level) {
