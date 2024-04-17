@@ -10,10 +10,22 @@ function sessionView() {
     <button class="sessionViewBtn" onclick="goToPage('createSessionView')">+</button>
     
     <div class="sessionViewContainer">
-    <div class ="sessionViewBox" onclick="chosenSessionView()">Økt 1</div>
-    <div class ="sessionViewBox" onclick="">Økt 2</div>
-    <div class ="sessionViewBox" onclick="">Økt 3</div>
-</div>
+        ${createSessionViewSessions()}
+    </div>
     `;
     app.innerHTML = html;
+}
+
+function createSessionViewSessions() {
+    let html = '';
+    const user = model.data.users[0];
+    for (i = 0; i < user.sessions.length; i++) {
+        const session = user.sessions[i];
+        html += /*HTML*/ `
+        
+        <div class ="sessionViewBox" onclick="chosenSessionView()">${session.name}</div>
+        
+        `;
+    }
+    return html;
 }
