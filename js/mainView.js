@@ -13,21 +13,21 @@ app.innerHTML = html;
 function createBeltHtml(){
     return /*html*/`
     <div class ="beltContainerMain">
-        <div class="beltBoxMain yellowBelt ${model.data.clickedBelt == 1 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(1)">5.kyu - Gult belte
-        ${model.data.clickedBelt == 1 ? createDropdownBeltHtml("belt1") : ""}
+        <div class="beltBoxMain yellowBelt selectedBelt">5.kyu - Gult belte
+        ${createDropdownBeltHtml("belt1")}
         </div>
 
-    <div class="beltBoxMain orangeBelt ${model.data.clickedBelt == 2 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(2)">4.kyu - Oransje belte
-    ${model.data.clickedBelt == 2 ? createDropdownBeltHtml("belt2") : ""}
+    <div class="beltBoxMain orangeBelt selectedBelt">4.kyu - Oransje belte
+    ${createDropdownBeltHtml("belt2")}
     </div>
-    <div class="beltBoxMain greenBelt ${model.data.clickedBelt == 3 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(3)">3.kyu - Grønt belte
-    ${model.data.clickedBelt == 3 ? createDropdownBeltHtml("belt3") : ""}
+    <div class="beltBoxMain greenBelt selectedBelt">3.kyu - Grønt belte
+     ${createDropdownBeltHtml("belt3")}
     </div>
-    <div class="beltBoxMain blueBelt ${model.data.clickedBelt == 4 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(4)">2.kyu - Blått belte
-    ${model.data.clickedBelt == 4 ? createDropdownBeltHtml("belt4") : ""}
+    <div class="beltBoxMain blueBelt selectedBelt">2.kyu - Blått belte
+     ${createDropdownBeltHtml("belt4")}
     </div>
-    <div class="beltBoxMain brownBelt ${model.data.clickedBelt == 5 ? "selectedBelt" : ""}" onclick="checkBeltDropdown(5)">1.kyu - Brunt belte
-    ${model.data.clickedBelt == 5 ? createDropdownBeltHtml("belt5") : ""}
+    <div class="beltBoxMain brownBelt selectedBelt">1.kyu - Brunt belte
+     ${createDropdownBeltHtml("belt5")}
     </div>
     </div>
 `;
@@ -37,9 +37,11 @@ function createBeltHtml(){
 function createDropdownBeltHtml(belt) {
 
     return /*HTML*/`
+    <div class="tech-redirect-wrap">
     <p class="technique-redirect" onclick="goToPage('${belt}front')"> Front</p>
     <p class="technique-redirect" onclick="goToPage('${belt}behind')">Bak</p>
     <p class="technique-redirect" onclick="goToPage('${belt}ground')"> Bakke</p>
     <p class="technique-redirect" onclick="goToPage('${belt}kata')"> Kata</p>
-`;
+    </div>
+    `;
 }
