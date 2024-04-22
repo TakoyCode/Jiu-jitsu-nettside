@@ -66,25 +66,31 @@ function createSelVideosView() {
 }
 
 function createSelVideosHTML() {
-
     return /*html*/`
-    <div class="addVideoBlur">
-    <button onclick="goToPage('createSessionView')">BACK - Placeholder</button>
-        <div class="videoSelContainer">
-            <div class="selVideoFilter">
-                <p style="margin-left: 1%"><b>Filter</b></p> 
-                <p style="margin-left: 1rem;">Nivå: <img class="sortIcon"src="asc.png" onclick=""></p>
-                <p style="margin-left: 2rem;">Belte: <img class="sortIcon"src="asc.png" onclick=""></p>
-                <p style="margin-left: 2rem;">Kategori: </p> 
-                <select name="Kategori" id="teknikKategori">
-                <option value="None">None</option>
-                <option value="Front">Front</option>
-                <option value="Bak">Bak</option>
-                <option value="Bakke">Bakke</option>
-                <option value="Kata">Kata</option>
-              </select>
+        <div class="addVideoBlur">
+            <button onclick="goToPage('createSessionView')">BACK - Placeholder</button>
+            <div class="videoSelContainer">
+                ${createVideoSelectFilterHtml()}
+                ${createvideoPreviewHtml()}
+                ${createSelectVideoPage()}
             </div>
+        </div>
+    `;
+}
 
+function createSelectVideoPage() {
+    return /*HTML*/ `
+        <div class="selectVidPageContainer">
+            <img class="vidPageGoLeft"src="nextPage.png">
+            <span class="currentVidSelPage">1</span>
+            <img class="vidPageGoRight"src="nextPage.png">        
+        </div>
+    `;
+}
+
+
+function createvideoPreviewHtml() {
+    return /*HTML*/ `
         <div class="vidPreviewContainer">
             <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
             <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
@@ -93,17 +99,31 @@ function createSelVideosHTML() {
             <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
             <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
         </div>
-
-        <div class="selectVidPageContainer">
-        <img class="vidPageGoLeft"src="nextPage.png"><span class="currentVidSelPage">1</span><img class="vidPageGoRight"src="nextPage.png">
-        </div>
-
-        </div>
-        </div>
-    
-    </div>
-
-
-`;
+    `;
 }
 
+function createVideoSelectFilterHtml() {
+    return /*HTML*/ `
+        <div class="selVideoFilter">
+                    <p style="margin-left: 1%">
+                        <b>Filter</b>
+                    </p> 
+                    <p style="margin-left: 1rem;">
+                        Nivå: <img class="sortIcon"src="asc.png" onclick="">
+                    </p>
+                    <p style="margin-left: 2rem;">
+                        Belte: <img class="sortIcon"src="asc.png" onclick="">
+                    </p>
+                    <p style="margin-left: 2rem;">
+                        Kategori: 
+                    </p> 
+                    <select name="Kategori" id="teknikKategori">
+                        <option value="None">None</option>
+                        <option value="Front">Front</option>
+                        <option value="Bak">Bak</option>
+                        <option value="Bakke">Bakke</option>
+                        <option value="Kata">Kata</option>
+                    </select>
+                </div>
+    `;
+}

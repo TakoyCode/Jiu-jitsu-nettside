@@ -1,6 +1,14 @@
-let test = [];
-
 function addSession() {
-    const user = model.data.users[0]
+    const user = model.data.users[0];
     user.sessions.push(JSON.parse(JSON.stringify(model.inputs.session)));
+    emptyCreateSessionInputs();
+    goToPage('sessionView');
+}
+
+function emptyCreateSessionInputs() {
+    const input = model.inputs.session;
+    input.name = null;
+    input.level = null;
+    input.description = null;
+    input.media = [];
 }
