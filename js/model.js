@@ -2,7 +2,7 @@
 const model = {
 
     app: {
-        currentPage: "techniqueView",
+        currentPage: "sessionView",
         user: "Meg",
         currentTechnique: 'Bakke1'
     },
@@ -29,6 +29,7 @@ const model = {
     data: {
         clickedBelt: null,
         beltCategoryOpen: false,
+        chosenSessionIndex: null,
 
         users: [
             {
@@ -38,20 +39,20 @@ const model = {
                 sessions: [
                     {
                         name: "økt 1",
-                        level: "2 kyu",
+                        level: "1 kyu",
                         description: "uke 1 fokus",
                         media: [0, 1],
                     },
                     {
                         name: "økt 2",
                         level: "2 kyu",
-                        description: "uke 1 fokus",
+                        description: "uke 2 fokus",
                         media: [0, 1],
                     },
                     {
                         name: "økt 3",
-                        level: "2 kyu",
-                        description: "uke 1 fokus",
+                        level: "3 kyu",
+                        description: "uke 3 fokus",
                         videos: [0, 1],
                     },
                 ],

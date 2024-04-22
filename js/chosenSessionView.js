@@ -2,32 +2,31 @@
 function chosenSessionView(){
     const app = document.getElementById("app")
     let html = "";
+    const session = model.data.users[0].sessions[model.data.chosenSessionIndex]
     html = /*HTML*/`
     ${createNavBar()}
-     <h1 class="chosenSessionHeader">Overskrift</h1>
-    <button class="chosenSessionBtn" onclick="">Slett</button>
+    <h1 class="chosenSessionHeader">${session.name}</h1>
+    
     <hr style="width: 20%"/>
     <div class="chosenSessionContainer">
-    <button class ="chosenSessionBtnBack" onclick="">Tilbake</button>
-    <div>${chosenSessionViewSessions()}</div>
-    <button class="chosenSessionSlide"onclick=""><- 1 -></button>
-</div>
+        <button class ="chosenSessionBtnBack" onclick="goToPage('sessionView')">Tilbake</button>
+        ${chosenSessionViewHtml()}
+        <button class="chosenSessionSlide"onclick=""><- 1 -></button>
+    </div>
+`;
 
-    `;
 app.innerHTML = html;
 }
 
-function chosenSessionViewSessions(){
-    let html = '';
-    const user = model.data.users[0];
-    for (let i = 0; i < user.sessions.length; i++){
-    const session = user.sessions[i];
-    html =/*html*/ `
-    <div class="chosenSessionBox">Nivå: ${session.level}</div>
-    <div class="chosenSessionBox">${session.description}</div>
-    <div class="chosenSessionBox">${session.name}</div>
-    <div class="chosenSessionBox">VIDEO</div>
+function chosenSessionViewHtml(){
+    const session = model.data.users[0].sessions[model.data.chosenSessionIndex];
+    return /*html*/ `
+        <div>
+            <button class="chosenSessionBtn" onclick="remove(${i})">Slett</button>
+            <div class="chosenSessionBox">Nivå: ${session.level}</div>
+            <div class="chosenSessionBox">${session.description}</div>
+            <div class="chosenSessionBox">${session.name}</div>
+            <div class="chosenSessionBox">VIDEO</div>
+        </div>
     `;
-    }
-    return html;
 }

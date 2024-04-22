@@ -2,6 +2,7 @@ function updateView() {
     if (model.app.currentPage == null || model.app.currentPage == "mainPage") mainView();
     else if (model.app.currentPage == "sessionView") sessionView();
     else if (model.app.currentPage == "createSessionView") createSessionView();
+    else if (model.app.currentPage == "chosenSessionView") chosenSessionView();
     else if (model.app.currentPage == "techniqueView") techniqueView();
 }
 
@@ -27,6 +28,5 @@ function createNavBar() {
             <div>50 %</div>
         </div>
     </div>
-    
     `;
 }

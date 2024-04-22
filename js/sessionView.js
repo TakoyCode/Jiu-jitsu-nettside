@@ -23,9 +23,14 @@ function createSessionViewSessions() {
         const session = user.sessions[i];
         html += /*HTML*/ `
         
-        <div class ="sessionViewBox" onclick="chosenSessionView()">${session.name}</div>
+        <div class ="sessionViewBox" onclick="goToChosenSession(${i})">${session.name}</div>
         
         `;
     }
     return html;
+}
+
+function goToChosenSession(index){
+    model.data.chosenSessionIndex = index;
+    goToPage('chosenSessionView');
 }
