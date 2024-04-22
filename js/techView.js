@@ -1,88 +1,63 @@
 function techniqueView() {
     const app = document.getElementById("app");
-    let html = "";
-    html += /*HTML*/ `
-    <div class="centerElements">
+    let technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique)
+    let html = /*HTML*/ `
         ${createNavBar()}
-
-        
-          <div class="centerElements">
-            <div><strong>Front</strong></div>
-            <div class="centerElements">onclick="${seeTechHtml()}"</div> 
-                <hr style="width: 20%"/>
-                    <div>*teknikknavn*</div>
-                    <div onclick="changeLevel()">Beherskelsesnivå : 🟥</div>
-                    <video width="30%" controls style="border-radius: 1.5rem">
-                        <source src="placeholder.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-            <div class="centerElements">
-                    <div>*teknikknavn*</div>
-                    <div onclick="changeLevel()">Beherskelsesnivå : 🟥</div>
-                    <video width="30%" controls style="border-radius: 1.5rem">
-                        <source src="placeholder.mp4" type="video/mp4">
-                    </video>
-                </div>
-            </div>
-        </div>
-    `
-    app.innerHTML = html;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-function teknikk2() {
-    const app = document.getElementById("app");
-    let html = "";
-    html += `
-    <div class="techniques">
-    <div>Teknikk 2</div>
-    <div>teknikknavn</div>
-    <div>Beherskelsesnivå</div>
-     </div>
-    
-    <button onclick="teknikk3()">Gå til neste teknikk</button>
+        <div>${technique.name}</div>
+        <hr/>
+        ${createTechniqueVideoshtml()}
     `;
     app.innerHTML = html;
 }
 
-function teknikk3() {
-    const app = document.getElementById("app");
-    let html = "";
-    html +=  `
-<div class="techniques">
-<div>Teknikk 3</div>
-<div>teknikknavn</div>
-<div>Beherskelsesnivå</div>
- </div>
+function createTechniqueVideoshtml() {
+    let html = ``;
+    const technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique);
+    for (let i = 0; i < technique.videos.length; i++) {
+        html += /*HTML*/ `
 
-<button onclick="teknikk4()">Gå til neste teknikk</button>
-`;
-    app.innerHTML = html;
+        <div class="techniqueContainer">
+            <div>VIDEO NAVN</div>
+            </div>
+            <div class="techniqueContainer">
+                <div>Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}</div>
+                <video width="200rem" controls>
+                    <source src="${model.data.videos[technique.videos[i]].mediaPath}">
+                </video>
+            </div>
+        </div>    
+    `;
+    }
+    return html;
 }
 
-function teknikk4() {
-    const app = document.getElementById("app");
-    let html = "";
-    html += `
-<div class="techniques">
-<div>Teknikk 4</div>
-<div>teknikknavn</div>
-<div>Beherskelsesnivå</div>
- </div>
-`;
-    app.innerHTML = html;
+function getLevelEmoji(level) {
+    let html = ``;
+    switch (level) {
+        case 1:
+            html = "🟥"
+            break;
+        case 2:
+            html = "🟨"
+            break;
+        case 3:
+            html = "🟩"
+            break;
+
+        default:
+            html = "🟥"
+            break;
+    }
+    return html;
+}
+
+
+
+/*      Anderledeses metode å skrive .find på
+function findTechnique(name) {
+    for (let i = 0; i < model.data.techniques.length; i++) {
+        if (model.data.techniques[i].name == name) {
+            return model.data.techniques[i]
+        }
+    }
 } */
