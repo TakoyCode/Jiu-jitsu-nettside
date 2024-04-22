@@ -3,6 +3,7 @@ function updateView() {
     else if (model.app.currentPage == "sessionView") sessionView();
     else if (model.app.currentPage == "createSessionView") createSessionView();
     else if (model.app.currentPage == "chosenSessionView") chosenSessionView();
+    else if (model.app.currentPage == "popUp") createSelVideosView();
     else if (model.app.currentPage == "techniqueView") techniqueView();
 }
 

@@ -2,7 +2,7 @@
 const model = {
 
     app: {
-        currentPage: "sessionView",
+        currentPage: null,
         user: "Meg",
         currentTechnique: 'Bakke1'
     },
@@ -369,7 +369,7 @@ const model = {
                 relBelt: 5,
                 mediaPath: "videos/5kyu (8).mp4",
             },
-            
+
         ],
     },
 };

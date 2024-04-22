@@ -12,3 +12,8 @@ function emptyCreateSessionInputs() {
     input.description = null;
     input.media = [];
 }
+
+function addVideo(index) {
+    model.inputs.session.media.push(index);
+    goToPage('createSessionView');
+}
