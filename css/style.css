@@ -239,13 +239,13 @@ body {
 
 .createSessionWrapper {
     background-color: rgb(238, 238, 238);
-    height: auto;
     width: auto;
     padding: 0rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: scroll;
 }
 
 .createSessionInputContainer {
@@ -368,8 +368,7 @@ p {
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    overflow: hidden;
-
+    overflow-y: scroll;
 }
 
 #teknikKategori {
@@ -415,4 +414,11 @@ p {
 .vidPageGoLeft:hover {
     scale: 1.2;
 
+}
+
+.chosenVideoPreviewContainer {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 21.2rem;
+    height: 15.3rem;
 }

@@ -14,7 +14,6 @@ function createSessionView() {
 
 function createSessionHtml() {
     return /*Html*/ `
-
         <div class="createSessionTittle centerElements">
             <div>Opprett økt</div>
             <hr style="width: 30rem;"/>   
@@ -41,13 +40,27 @@ function createSessionHtml() {
                 <label>Teknikk-videoer: </label>
                 <div class="createSessionAddVideo" onclick="createSelVideosView();">+</div>
             </div>
+            <div class="chosenVideoPreviewContainer">
+                ${showSelectedVideosHtml()}
+            </div>
             <div class="createSessionInputDiv">
                 <button onclick="goToPage('sessionView')">Tilbake</button>
                 <button onclick="addSession()">Legg til økt</button>
             </div>
         </div>
-    
     `;
+}
+
+function showSelectedVideosHtml() {
+    let html = '';
+    for (let i = 0; i < model.inputs.session.media.length; i++) {
+        html += /*HTML*/ `
+        
+        <video class="" src="${model.data.videos[i].mediaPath}"></video>
+
+        `;
+    }
+    return html;
 }
 
 function createSelVideosView() {
@@ -56,22 +69,22 @@ function createSelVideosView() {
     html += /*HTML*/`
 
         <div class="centerElements">
-        ${createNavBar()}
-        ${createSessionHtml()}
-        ${createSelVideosHTML()}
+            ${createNavBar()}
+            ${createSessionHtml()}
+            ${createSelectVideosHTML()}
         </div>
         `;
 
     app.innerHTML = html;
 }
 
-function createSelVideosHTML() {
+function createSelectVideosHTML() {
     return /*html*/`
         <div class="addVideoBlur">
             <button onclick="goToPage('createSessionView')">BACK - Placeholder</button>
             <div class="videoSelContainer">
                 ${createVideoSelectFilterHtml()}
-                ${createvideoPreviewHtml()}
+                ${createVideoPreviewHtml()}
                 ${createSelectVideoPage()}
             </div>
         </div>
@@ -89,41 +102,46 @@ function createSelectVideoPage() {
 }
 
 
-function createvideoPreviewHtml() {
+function createVideoPreviewHtml() {
     return /*HTML*/ `
         <div class="vidPreviewContainer">
-            <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
-            <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
-            <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
-            <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
-            <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
-            <video class="vidPreview"src="${model.data.videos[0].mediaPath}"></video>
+            ${createSelectebleVideosHtml()}
         </div>
     `;
+}
+
+function createSelectebleVideosHtml() {
+    let html = '';
+    for (let i = 0; i < model.data.videos.length; i++) {
+        html += /*HTMl*/ `
+        <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
+        `;
+    }
+    return html;
 }
 
 function createVideoSelectFilterHtml() {
     return /*HTML*/ `
         <div class="selVideoFilter">
-                    <p style="margin-left: 1%">
-                        <b>Filter</b>
-                    </p> 
-                    <p style="margin-left: 1rem;">
-                        Nivå: <img class="sortIcon"src="asc.png" onclick="">
-                    </p>
-                    <p style="margin-left: 2rem;">
-                        Belte: <img class="sortIcon"src="asc.png" onclick="">
-                    </p>
-                    <p style="margin-left: 2rem;">
-                        Kategori: 
-                    </p> 
-                    <select name="Kategori" id="teknikKategori">
-                        <option value="None">None</option>
-                        <option value="Front">Front</option>
-                        <option value="Bak">Bak</option>
-                        <option value="Bakke">Bakke</option>
-                        <option value="Kata">Kata</option>
-                    </select>
-                </div>
+                <p style="margin-left: 1%">
+                    <b>Filter</b>
+                </p> 
+                <p style="margin-left: 1rem;">
+                    Nivå: <img class="sortIcon"src="asc.png" onclick="">
+                </p>
+                <p style="margin-left: 2rem;">
+                    Belte: <img class="sortIcon"src="asc.png" onclick="">
+                </p>
+                <p style="margin-left: 2rem;">
+                    Kategori: 
+                </p> 
+                <select name="Kategori" id="teknikKategori">
+                    <option value="None">None</option>
+                    <option value="Front">Front</option>
+                    <option value="Bak">Bak</option>
+                    <option value="Bakke">Bakke</option>
+                    <option value="Kata">Kata</option>
+                </select>
+        </div>
     `;
 }
