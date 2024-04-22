@@ -2,7 +2,7 @@
 const model = {
 
     app: {
-        currentPage: "sessionView",
+        currentPage: null,
         user: "Meg",
         currentTechnique: 'Bakke1'
     },
@@ -30,6 +30,10 @@ const model = {
         clickedBelt: null,
         beltCategoryOpen: false,
         chosenSessionIndex: null,
+        oneMaxExp: 0,
+        twoMaxExp: 0,
+        threeMaxExp: 0,
+
 
         users: [
             {
@@ -89,14 +93,17 @@ const model = {
                 name: "Teknikknavn1",
                 masteryLevel: 1,
                 categories: [1],
+                relBelt: 1,
                 mediaPath: "placeholder.mp4",
             },
             {
                 name: "Teknikknavn2",
                 masteryLevel: 1,
                 categories: [1],
+                relBelt: 1,
                 mediaPath: "placeholder.mp4",
             },
         ],
     },
 };
+
