@@ -30,9 +30,14 @@ const model = {
         clickedBelt: null,
         beltCategoryOpen: false,
         chosenSessionIndex: null,
-        oneMaxExp: 0,
-        twoMaxExp: 0,
-        threeMaxExp: 0,
+
+        belt: {
+            oneMaxExp: 0,
+            twoMaxExp: 0,
+            threeMaxExp: 0,
+            fourMaxExp: 0,
+            fiveMaxExp: 0,
+        },
 
 
         users: [
