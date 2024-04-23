@@ -34,7 +34,6 @@ function createNavBar() {
 
 function calculateAverageMastery() { // Brukes til å kalkulere prosent fullført av nåværende nivå. (Gjennomsnitt målt mot maxMastery relevant til belte)
     const video = model.data.videos;
-<<<<<<< HEAD
     const userLevel = model.data.users[0].level
     let sum = 0;
         
@@ -53,14 +52,7 @@ return average * 100;
         if(video[i].masteryLevel == 1) average += 0; // Vil ikke denne gjøre at vi aldri treffer max xp?
         else average += video[i].masteryLevel;
     } */
-=======
-    let average = 0;
-    for (i = 0; i < video.length; i++) {
-        average += video[i].masteryLevel;
-    }
-    average = average / video.length;
-    console.log(average);
->>>>>>> 2af163bb35ee1341130adf187639b8e319de0b66
+
 }
 
 function calculateMaxMastery() {
@@ -112,3 +104,6 @@ function calculateCurrentPercentage() {
     console.log(rawNum/model.data.belt.oneMaxExp*100)
 
 }
+
+
+
