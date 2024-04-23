@@ -24,13 +24,15 @@ function createNavBar() {
             <div class="beltLevel">2</div>
             <div class="progressBarText">Prosent til neste nivå</div>
             <div class="progressBarBackground">
-                <div class="progressBar"></div>
+                <div class="progressBar" style="width:${model.data.belt.percentageToNext}%"></div>
             </div>
-            <div>50 %</div>
+            <div>${Math.floor(model.data.belt.percentageToNext)}%</div>
         </div>
     </div>
     `;
 }
+calculateMaxMastery();
+calculateAverageMastery();
 
 function calculateAverageMastery() { // Brukes til å kalkulere prosent fullført av nåværende nivå. (Gjennomsnitt målt mot maxMastery relevant til belte)
     const video = model.data.videos;
@@ -47,7 +49,10 @@ function calculateAverageMastery() { // Brukes til å kalkulere prosent fullfør
     const average = sum / model.data.belt.oneMaxExp;
     console.log("average "+ average)
     console.log("average " + average)
-    return average * 100;
+
+    model.data.belt.percentageToNext = average * 100;
+
+    
 
 
 }

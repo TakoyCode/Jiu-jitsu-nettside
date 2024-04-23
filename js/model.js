@@ -97,7 +97,7 @@ const model = {
         videos: [
             {
                 name: "Front1",
-                masteryLevel: 0,
+                masteryLevel: 2,
                 categories: [0],
                 relBelt: 1,
                 mediaPath: "videos/1kyu (1).mp4",
