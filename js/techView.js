@@ -1,3 +1,4 @@
+
 function techniqueView() {
     const app = document.getElementById("app");
     let technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique)
@@ -20,7 +21,10 @@ function createTechniqueVideoshtml() {
             <div>VIDEO NAVN</div>
             </div>
             <div class="techniqueContainer">
-                <div>Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}</div>
+                <div>Beherskelses nivå: 
+                <div onclick="changeMasteryLevel(${technique.videos[i]})">${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
+                </div>
+                </div>
                 <video width="200rem" controls>
                     <source src="${model.data.videos[technique.videos[i]].mediaPath}">
                 </video>
@@ -30,6 +34,15 @@ function createTechniqueVideoshtml() {
     }
     return html;
 }
+
+function changeMasteryLevel(index) {
+            if (model.data.videos[index].masteryLevel < 3) {
+                    model.data.videos[index].masteryLevel++;
+            } else {
+                    model.data.videos[index].masteryLevel = 1;
+            }
+        updateView();
+    }
 
 function getLevelEmoji(level) {
     let html = ``;
@@ -50,7 +63,6 @@ function getLevelEmoji(level) {
     }
     return html;
 }
-
 
 
 /*      Anderledeses metode å skrive .find på

@@ -34,6 +34,7 @@ function createNavBar() {
 
 function calculateAverageMastery() { // Brukes til å kalkulere prosent fullført av nåværende nivå. (Gjennomsnitt målt mot maxMastery relevant til belte)
     const video = model.data.videos;
+<<<<<<< HEAD
     const userLevel = model.data.users[0].level
     let sum = 0;
         
@@ -52,6 +53,14 @@ return average * 100;
         if(video[i].masteryLevel == 1) average += 0; // Vil ikke denne gjøre at vi aldri treffer max xp?
         else average += video[i].masteryLevel;
     } */
+=======
+    let average = 0;
+    for (i = 0; i < video.length; i++) {
+        average += video[i].masteryLevel;
+    }
+    average = average / video.length;
+    console.log(average);
+>>>>>>> 2af163bb35ee1341130adf187639b8e319de0b66
 }
 
 function calculateMaxMastery() {
@@ -62,35 +71,35 @@ function calculateMaxMastery() {
     model.data.belt.fourMaxExp = 0;
     model.data.belt.fiveMaxExp = 0;
 
-    for(i = 0; i < videos.length; i++) {
-        if(videos[i].relBelt == 1) {
-            if(videos[i].masteryLevel == 1) model.data.belt.oneMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
-            else if(videos[i].masteryLevel == 2) model.data.belt.oneMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
-            else if(videos[i].masteryLevel == 3) model.data.belt.oneMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
+    for (i = 0; i < videos.length; i++) {
+        if (videos[i].relBelt == 1) {
+            if (videos[i].masteryLevel == 1) model.data.belt.oneMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
+            else if (videos[i].masteryLevel == 2) model.data.belt.oneMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
+            else if (videos[i].masteryLevel == 3) model.data.belt.oneMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
         };
-        if(videos[i].relBelt == 2) {
-            if(videos[i].masteryLevel == 1) model.data.belt.twoMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
-            else if(videos[i].masteryLevel == 2) model.data.belt.twoMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
-            else if(videos[i].masteryLevel == 3) model.data.belt.twoMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
+        if (videos[i].relBelt == 2) {
+            if (videos[i].masteryLevel == 1) model.data.belt.twoMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
+            else if (videos[i].masteryLevel == 2) model.data.belt.twoMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
+            else if (videos[i].masteryLevel == 3) model.data.belt.twoMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
         };
-        if(videos[i].relBelt == 3) {
-            if(videos[i].masteryLevel == 1) model.data.belt.threeMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
-            else if(videos[i].masteryLevel == 2) model.data.belt.threeMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
-            else if(videos[i].masteryLevel == 3) model.data.belt.threeMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
-            
+        if (videos[i].relBelt == 3) {
+            if (videos[i].masteryLevel == 1) model.data.belt.threeMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
+            else if (videos[i].masteryLevel == 2) model.data.belt.threeMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
+            else if (videos[i].masteryLevel == 3) model.data.belt.threeMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
+
         };
-        if(videos[i].relBelt == 4) {
-            if(videos[i].masteryLevel == 1) model.data.belt.fourMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
-            else if(videos[i].masteryLevel == 2) model.data.belt.fourMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
-            else if(videos[i].masteryLevel == 3) model.data.belt.fourMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
+        if (videos[i].relBelt == 4) {
+            if (videos[i].masteryLevel == 1) model.data.belt.fourMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
+            else if (videos[i].masteryLevel == 2) model.data.belt.fourMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
+            else if (videos[i].masteryLevel == 3) model.data.belt.fourMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
         };
-        if(videos[i].relBelt == 5) {
-            if(videos[i].masteryLevel == 1) model.data.belt.fiveMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
-            else if(videos[i].masteryLevel == 2) model.data.belt.fiveMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
-            else if(videos[i].masteryLevel == 3) model.data.belt.fiveMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
+        if (videos[i].relBelt == 5) {
+            if (videos[i].masteryLevel == 1) model.data.belt.fiveMaxExp += videos[i].masteryLevel * 3; // Om mastery er 1, gange opp til 3.
+            else if (videos[i].masteryLevel == 2) model.data.belt.fiveMaxExp += videos[i].masteryLevel * 1.5; // Om mastery er 2, gange opp til 3.
+            else if (videos[i].masteryLevel == 3) model.data.belt.fiveMaxExp += videos[i].masteryLevel; // Om mastery er 3, tildel 3.
         };
     };
-    
+
     console.log("One: " + model.data.belt.oneMaxExp)
     console.log("Two: " + model.data.belt.twoMaxExp)
     console.log("Three: " + model.data.belt.threeMaxExp)
