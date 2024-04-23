@@ -1,0 +1,39 @@
+
+.tech-redirect-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.technique-redirect {
+    color: currentColor;
+    filter: brightness(115%);
+    animation: fadeIn 0.3s;
+    width: 3rem;
+
+}
+
+@keyframes fadeIn {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.techniqueContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 50%;
+    border: 4px solid black;
+    background-color: rgb(160, 94, 94);
+    border-radius: 3%;
+    font-size: larger;
+    cursor: pointer;
+}
