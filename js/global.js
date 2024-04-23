@@ -13,6 +13,7 @@ function goToPage(page) {
 }
 
 function createNavBar() {
+    calculateAverageMastery();
     return /*HTML*/ `
     
     <div class="navBar">
@@ -113,11 +114,6 @@ function calculateMaxMastery() {
     console.log("Five: " + model.data.belt.fiveMaxExp)
 }
 
-function calculateCurrentPercentage() {
-    rawNum = calculateAverageMastery();
-    console.log(rawNum / model.data.belt.oneMaxExp * 100)
-
-}
 
 
 

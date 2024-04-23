@@ -35,10 +35,10 @@ function createTechniqueVideoshtml() {
 }
 
 function changeMasteryLevel(index) {
-    if (model.data.videos[index].masteryLevel < 3) {
+    if (model.data.videos[index].masteryLevel < 2) {
         model.data.videos[index].masteryLevel++;
     } else {
-        model.data.videos[index].masteryLevel = 1;
+        model.data.videos[index].masteryLevel = 0;
     }
     updateView();
 }
@@ -46,13 +46,13 @@ function changeMasteryLevel(index) {
 function getLevelEmoji(level) {
     let html = ``;
     switch (level) {
-        case 1:
+        case 0:
             html = "🟥"
             break;
-        case 2:
+        case 1:
             html = "🟨"
             break;
-        case 3:
+        case 2:
             html = "🟩"
             break;
 
