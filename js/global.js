@@ -48,10 +48,6 @@ const average = sum / model.data.belt.oneMaxExp;
 console.log("average "+ average)
 return average * 100;
 
- /*    for(i = 0; i < video.length; i++) {
-        if(video[i].masteryLevel == 1) average += 0; // Vil ikke denne gjøre at vi aldri treffer max xp?
-        else average += video[i].masteryLevel;
-    } */
 
 }
 
