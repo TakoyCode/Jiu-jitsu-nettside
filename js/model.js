@@ -44,7 +44,7 @@ const model = {
         users: [
             {
                 name: "Meg",
-                level: 2,
+                level: 1,
                 percentToNextBelt: 0,
                 sessions: [
                     {
@@ -70,54 +70,126 @@ const model = {
         ],
 
         techniques: [
-            {
-                name: "belt1front",
-                title: "",
-                level: 1,
-                videos: [0, 1],
-            },
-            {
-                name: "belt1behind",
-                title: "",
-                level: 1,
-                videos: [0, 1]
-            },
-            {
-                name: "belt1ground",
-                title: "",
-                level: 1,
-                videos: [0, 1]
-            },
-            {
-                name: "belt1kata",
-                title: "",
-                level: 1,
-                videos: [0, 1]
-            },
-            {
-                name: "belt2front",
-                title: "",
-                level: 1,
-                videos: [0, 1],
-            },
-            {
-                name: "belt2behind",
-                title: "",
-                level: 1,
-                videos: [0, 1]
-            },
-            {
-                name: "belt2ground",
-                title: "",
-                level: 1,
-                videos: [0, 1]
-            },
-            {
-                name: "belt2kata",
-                title: "",
-                level: 1,
-                videos: [0, 1]
-            },
+        {
+            name: "belt1front",
+            title: "Front for belte 1",
+            level: 1,
+            videos: [0, 1],
+        },
+        {
+            name: "belt1behind",
+            title: "Bak for belte 1",
+            level: 1,
+            videos: [2, 3]
+        },
+        {
+            name: "belt1ground",
+            title: "Bakke for belte 1",
+            level: 1,
+            videos: [4, 5]
+        },
+        {
+            name: "belt1kata",
+            title: "Kata for belte 1",
+            level: 1,
+            videos: [6, 7]
+        },
+        {
+            name: "belt2front",
+            title: "Front for belte 2",
+            level: 1,
+            videos: [8, 9],
+        },
+        {
+            name: "belt2behind",
+            title: "Bak for belte 2",
+            level: 1,
+            videos: [10, 11]
+        },
+        {
+            name: "belt2ground",
+            title: "Bakke for belte 2",
+            level: 1,
+            videos: [12, 13]
+        },
+        {
+            name: "belt2kata",
+            title: "Kata for belte 2",
+            level: 1,
+            videos: [14, 15]
+        },
+        {
+            name: "belt3front",
+            title: "Front for belte 3",
+            level: 1,
+            videos: [16, 17]
+        },
+        {
+            name: "belt3behind",
+            title: "Bak for belte 3",
+            level: 1,
+            videos: [18, 19]
+        },
+        {
+            name: "belt3ground",
+            title: "Bakke for belte 3",
+            level: 1,
+            videos: [20, 21]
+        },
+        {
+            name: "belt3kata",
+            title: "Kata for belte 3",
+            level: 1,
+            videos: [22, 23]
+        },
+        {
+            name: "belt4front",
+            title: "Front for belte 4",
+            level: 1,
+            videos: [24, 25]
+        },
+        {
+            name: "belt4behind",
+            title: "Bak for belte 4",
+            level: 1,
+            videos: [26, 27]
+        },
+        {
+            name: "belt4ground",
+            title: "Bakke for belte 4",
+            level: 1,
+            videos: [28, 29]
+        },
+        {
+            name: "belt4kata",
+            title: "Kata for belte 4",
+            level: 1,
+            videos: [30, 31]
+        },
+        {
+            name: "belt5front",
+            title: "Front for belte 5",
+            level: 1,
+            videos: [32, 33]
+        },
+        {
+            name: "belt5behind",
+            title: "Bak for belte 5",
+            level: 1,
+            videos: [34, 35]
+        },
+        {
+            name: "belt5ground",
+            title: "Bakke for belte 5",
+            level: 1,
+            videos: [36, 37]
+        },
+        {
+            name: "belt5kata",
+            title: "Kata for belte 5",
+            level: 1,
+            videos: [38, 39]
+        },
         ],
 
         categories: ["front", "bak", "bakke", "kata"],
