@@ -1,0 +1,70 @@
+body {
+    background-color: rgb(69, 69, 69);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    overflow: hidden;
+}
+
+.navBar {
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+    height: 4rem;
+    margin-top: 2rem;
+    border: 0.15rem solid rgb(113, 113, 113);
+
+    display: flex;
+    align-items: center;
+}
+
+.navButtonHolder>button {
+    width: 7rem;
+    height: 2rem;
+    margin-right: 3rem;
+    color: rgb(0, 151, 167);
+    font-size: 1.4rem;
+}
+
+.navButtonHolder {
+    width: 35rem;
+    margin-left: 3rem;
+}
+
+.progressBarContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+    margin-right: 4rem;
+}
+
+.beltLevel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+
+    background-color: rgb(74, 134, 232);
+    width: 3rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 0.1rem solid rgb(108, 108, 108);
+}
+
+.progressBar {
+    height: 100%;
+    width: 50%;
+    background-color: rgb(106, 168, 79);
+}
+
+.progressBarBackground {
+    height: 1.5rem;
+    width: 16rem;
+    border: 0.15rem solid rgb(108, 108, 108);
+}
+
+.progressBarText {
+    width: 5rem;
+    color: rgb(89, 89, 89);
+}
