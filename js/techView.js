@@ -1,4 +1,3 @@
-
 function techniqueView() {
     const app = document.getElementById("app");
     let technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique)
@@ -36,13 +35,13 @@ function createTechniqueVideoshtml() {
 }
 
 function changeMasteryLevel(index) {
-            if (model.data.videos[index].masteryLevel < 3) {
-                    model.data.videos[index].masteryLevel++;
-            } else {
-                    model.data.videos[index].masteryLevel = 1;
-            }
-        updateView();
+    if (model.data.videos[index].masteryLevel < 3) {
+        model.data.videos[index].masteryLevel++;
+    } else {
+        model.data.videos[index].masteryLevel = 1;
     }
+    updateView();
+}
 
 function getLevelEmoji(level) {
     let html = ``;
