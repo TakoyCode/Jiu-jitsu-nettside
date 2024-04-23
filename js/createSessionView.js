@@ -56,7 +56,7 @@ function showSelectedVideosHtml() {
     for (let i = 0; i < model.inputs.session.media.length; i++) {
         html += /*HTML*/ `
         
-        <video class="" src="${model.data.videos[i].mediaPath}"></video>
+        <video src="${model.data.videos[model.inputs.session.media[i]].mediaPath}"></video>
 
         `;
     }
@@ -114,7 +114,11 @@ function createSelectebleVideosHtml() {
     let html = '';
     for (let i = 0; i < model.data.videos.length; i++) {
         html += /*HTMl*/ `
-        <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
+        
+        <div class="vidPreviewWrapper">
+            <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
+            <div class="vidPreviewFooter">test</div>
+        </div>
         `;
     }
     return html;
