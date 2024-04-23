@@ -37,10 +37,15 @@ function createDropdownBeltHtml(belt) {
 
     return /*HTML*/`
     <div class="tech-redirect-wrap">
-        <p class="technique-redirect" onclick="techniqueView('${belt}front')"> Front</p>
-        <p class="technique-redirect" onclick="techniqueView('${belt}behind')">Bak</p>
-        <p class="technique-redirect" onclick="techniqueView('${belt}ground')"> Bakke</p>
-        <p class="technique-redirect" onclick="techniqueView('${belt}kata')"> Kata</p>
+        <p class="technique-redirect" onclick="changeCurrentTechnique('${belt}front')"> Front</p>
+        <p class="technique-redirect" onclick="changeCurrentTechnique('${belt}behind')">Bak</p>
+        <p class="technique-redirect" onclick="changeCurrentTechnique('${belt}ground')"> Bakke</p>
+        <p class="technique-redirect" onclick="changeCurrentTechnique('${belt}kata')"> Kata</p>
     </div>
     `;
+}
+
+function changeCurrentTechnique(technique) {
+    model.app.currentTechnique = technique;
+    goToPage('techniqueView');
 }

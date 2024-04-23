@@ -4,7 +4,7 @@ const model = {
     app: {
         currentPage: null,
         user: "Meg",
-        currentTechnique: 'Bakke1'
+        currentTechnique: null,
     },
 
     inputs: {
@@ -71,22 +71,50 @@ const model = {
 
         techniques: [
             {
-                name: "Front1",
+                name: "belt1front",
+                title: "",
                 level: 1,
                 videos: [0, 1],
             },
             {
-                name: "Bak1",
+                name: "belt1behind",
+                title: "",
                 level: 1,
                 videos: [0, 1]
             },
             {
-                name: "Bakke1",
+                name: "belt1ground",
+                title: "",
                 level: 1,
                 videos: [0, 1]
             },
             {
-                name: "Kata1",
+                name: "belt1kata",
+                title: "",
+                level: 1,
+                videos: [0, 1]
+            },
+            {
+                name: "belt2front",
+                title: "",
+                level: 1,
+                videos: [0, 1],
+            },
+            {
+                name: "belt2behind",
+                title: "",
+                level: 1,
+                videos: [0, 1]
+            },
+            {
+                name: "belt2ground",
+                title: "",
+                level: 1,
+                videos: [0, 1]
+            },
+            {
+                name: "belt2kata",
+                title: "",
                 level: 1,
                 videos: [0, 1]
             },
