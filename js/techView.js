@@ -3,7 +3,7 @@ function techniqueView() {
     let technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique)
     let html = /*HTML*/ `
         ${createNavBar()}
-        <div>${technique.name}</div>
+        <h2 class="techHeader">${technique.name}</h2>
         <hr/>
         ${createTechniqueVideoshtml()}
     `;
@@ -17,14 +17,15 @@ function createTechniqueVideoshtml() {
         html += /*HTML*/ `
 
         <div class="techniqueContainer">
-            <div>VIDEO NAVN</div>
-            </div>
-            <div class="techniqueContainer">
-                <div>Beherskelses nivå: 
+
+            <div class="techBox">VIDEO NAVN</div>
+            
+                <div class="techBox">Beherskelses nivå: 
                 <div onclick="changeMasteryLevel(${technique.videos[i]})">${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
                 </div>
                 </div>
-                <video width="200rem" controls>
+
+                <video class="techBox" width="200rem" controls>
                     <source src="${model.data.videos[technique.videos[i]].mediaPath}">
                 </video>
             </div>
@@ -35,10 +36,10 @@ function createTechniqueVideoshtml() {
 }
 
 function changeMasteryLevel(index) {
-    if (model.data.videos[index].masteryLevel < 2) {
+    if (model.data.videos[index].masteryLevel < 3) {
         model.data.videos[index].masteryLevel++;
     } else {
-        model.data.videos[index].masteryLevel = 0;
+        model.data.videos[index].masteryLevel = 1;
     }
     updateView();
 }
@@ -46,13 +47,13 @@ function changeMasteryLevel(index) {
 function getLevelEmoji(level) {
     let html = ``;
     switch (level) {
-        case 0:
+        case 1:
             html = "🟥"
             break;
-        case 1:
+        case 2:
             html = "🟨"
             break;
-        case 2:
+        case 3:
             html = "🟩"
             break;
 

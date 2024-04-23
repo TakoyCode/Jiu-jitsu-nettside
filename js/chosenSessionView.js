@@ -11,7 +11,6 @@ function chosenSessionView(){
     <div class="chosenSessionContainer">
         <button class ="chosenSessionBtnBack" onclick="goToPage('sessionView')">Tilbake</button>
         ${chosenSessionViewHtml()}
-        <button class="chosenSessionSlide"onclick=""><- 1 -></button>
     </div>
 `;
 
