@@ -32,6 +32,7 @@ const model = {
         chosenSessionIndex: null,
 
         belt: {
+            percentageToNext: 0,
             oneMaxExp: 0,
             twoMaxExp: 0,
             threeMaxExp: 0,
