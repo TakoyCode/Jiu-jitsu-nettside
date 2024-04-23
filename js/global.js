@@ -34,16 +34,33 @@ function createNavBar() {
 
 function calculateAverageMastery() { // Brukes til å kalkulere prosent fullført av nåværende nivå. (Gjennomsnitt målt mot maxMastery relevant til belte)
     const video = model.data.videos;
-    let average = 0;
-    for(i = 0; i < video.length; i++) {
-        average += video[i].masteryLevel;
-    }
-    average = average / video.length;
-    console.log(average);
+    const userLevel = model.data.users[0].level
+    let sum = 0;
+        
+    for(let i = 0; i < video.length; i++) {
+        if(video[i].relBelt == userLevel) {
+            sum += video[i].masteryLevel;
+        }
+}
+
+console.log(sum)
+const average = sum / model.data.belt.oneMaxExp;
+console.log("average "+ average)
+return average * 100;
+
+ /*    for(i = 0; i < video.length; i++) {
+        if(video[i].masteryLevel == 1) average += 0; // Vil ikke denne gjøre at vi aldri treffer max xp?
+        else average += video[i].masteryLevel;
+    } */
 }
 
 function calculateMaxMastery() {
     const videos = model.data.videos;
+    model.data.belt.oneMaxExp = 0;
+    model.data.belt.twoMaxExp = 0;
+    model.data.belt.threeMaxExp = 0;
+    model.data.belt.fourMaxExp = 0;
+    model.data.belt.fiveMaxExp = 0;
 
     for(i = 0; i < videos.length; i++) {
         if(videos[i].relBelt == 1) {
@@ -79,4 +96,10 @@ function calculateMaxMastery() {
     console.log("Three: " + model.data.belt.threeMaxExp)
     console.log("Four: " + model.data.belt.fourMaxExp)
     console.log("Five: " + model.data.belt.fiveMaxExp)
+}
+
+function calculateCurrentPercentage() {
+    rawNum = calculateAverageMastery();
+    console.log(rawNum/model.data.belt.oneMaxExp*100)
+
 }
