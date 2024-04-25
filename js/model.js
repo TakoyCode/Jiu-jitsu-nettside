@@ -3,6 +3,7 @@ const model = {
 
     app: {
         currentPage: null,
+        previousPage: null,
         user: "Meg",
         currentTechnique: null,
     },
