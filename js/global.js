@@ -127,12 +127,6 @@ function calculateMaxMastery() {
             else if (videos[i].masteryLevel == 2) model.data.belt.fiveMaxExp += videos[i].masteryLevel; // Om mastery er 2, tildel 2.
         };
     };
-
-    console.log("One: " + model.data.belt.oneMaxExp)
-    console.log("Two: " + model.data.belt.twoMaxExp)
-    console.log("Three: " + model.data.belt.threeMaxExp)
-    console.log("Four: " + model.data.belt.fourMaxExp)
-    console.log("Five: " + model.data.belt.fiveMaxExp)
 }
 
 
