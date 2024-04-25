@@ -5,7 +5,9 @@ function techniqueView() {
         ${createNavBar()}
         <h2 class="techHeader">${technique.name}</h2>
         <hr/>
-        ${createTechniqueVideoshtml()}
+        <div class="techniqueContainer">
+        <div>${createTechniqueVideoshtml()}</div>
+        </div>
     `;
     app.innerHTML = html;
 }
@@ -15,22 +17,18 @@ function createTechniqueVideoshtml() {
     const technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique);
     for (let i = 0; i < technique.videos.length; i++) {
         html += /*HTML*/ `
-
-        <div class="techniqueContainer">
-          <div class="techriqueBox">
+        <div class="techniqueBox">
             <div class="techBox">VIDEO NAVN</div>
-            
-                <div class="techBox">Beherskelses nivå: 
-                <div onclick="changeMasteryLevel(${technique.videos[i]})">${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
+            <div class="techBox">
+                <div onclick="changeMasteryLevel(${technique.videos[i]})">Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
                 </div>
-                </div>
+            </div>
 
                 <video class="techBox" width="200rem" controls>
                     <source src="${model.data.videos[technique.videos[i]].mediaPath}">
                 </video>
-                </div>
             </div>
-        </div>    
+        </div>
     `;
     }
     return html;
