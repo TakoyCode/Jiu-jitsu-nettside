@@ -17,3 +17,9 @@ function addVideo(index) {
     model.inputs.session.media.push(index);
     goToPage('createSessionView');
 }
+
+function changeFilterType(filterIndex) {
+    console.log(filterIndex)
+    model.inputs.filter.category = filterIndex;
+    updateView();
+}

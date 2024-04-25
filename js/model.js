@@ -9,7 +9,7 @@ const model = {
 
     inputs: {
         filter: {
-            type: "",
+            category: -1,
             direction: 0,
         },
 

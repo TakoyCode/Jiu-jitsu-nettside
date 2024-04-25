@@ -112,24 +112,43 @@ function createVideoPreviewHtml() {
 
 function createSelectebleVideosHtml() {
     let html = '';
-    for (let i = 0; i < model.data.videos.length; i++) {
-        html += /*HTMl*/ `
-        
-        <div class="vidPreviewWrapper">
-            <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
-            <div class="vidPreviewFooter">
-                <b>Name:</b> ${model.data.videos[i].name} 
-                <b>level:</b> ${model.data.videos[i].relBelt}.kyu 
-                <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[i].masteryLevel)}
-                <b>Category:</b> ${model.data.categories[model.data.videos[i].categories[0]]}
-            </div>
-        </div>
+    if (model.inputs.filter.category == -1) {
+        for (let i = 0; i < model.data.videos.length; i++) {
+            html += /*HTMl*/ `
+                <div class="vidPreviewWrapper">
+                    <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
+                    <div class="vidPreviewFooter">
+                        <b>Name:</b> ${model.data.videos[i].name} 
+                        <b>level:</b> ${model.data.videos[i].relBelt}.kyu 
+                        <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[i].masteryLevel)}
+                        <b>Category:</b> ${model.data.categories[model.data.videos[i].categories[0]]}
+                    </div>
+                </div>
         `;
+        }
     }
+    else {
+        for (let i = 0; i < model.data.videos.length; i++) {
+            if (model.data.videos[i].categories[0] == model.inputs.filter.category)
+                html += /*HTMl*/ `
+                <div class="vidPreviewWrapper">
+                    <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
+                    <div class="vidPreviewFooter">
+                        <b>Name:</b> ${model.data.videos[i].name} 
+                        <b>level:</b> ${model.data.videos[i].relBelt}.kyu 
+                        <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[i].masteryLevel)}
+                        <b>Category:</b> ${model.data.categories[model.data.videos[i].categories[0]]}
+                    </div>
+                </div>
+        `;
+        }
+    }
+
     return html;
 }
 
 function createVideoSelectFilterHtml() {
+    const filterType = model.inputs.filter.category;
     return /*HTML*/ `
         <div class="selVideoFilter">
                 <p style="margin-left: 1%">
@@ -144,12 +163,12 @@ function createVideoSelectFilterHtml() {
                 <p style="margin-left: 2rem;">
                     Kategori: 
                 </p> 
-                <select name="Kategori" id="teknikKategori">
-                    <option value="None">None</option>
-                    <option value="Front">Front</option>
-                    <option value="Bak">Bak</option>
-                    <option value="Bakke">Bakke</option>
-                    <option value="Kata">Kata</option>
+                <select name="Kategori" id="teknikKategori" onchange="changeFilterType(this.value)">
+                    <option value="${-1}" ${filterType == -1 ? "selected" : ""}>None</option>
+                    <option value="${0}" ${filterType == 0 ? "selected" : ""}>Front</option>
+                    <option value="${1}" ${filterType == 1 ? "selected" : ""}>Bak</option>
+                    <option value="${2}" ${filterType == 2 ? "selected" : ""}>Bakke</option>
+                    <option value="${3}" ${filterType == 3 ? "selected" : ""}>Kata</option>
                 </select>
         </div>
     `;
