@@ -28,26 +28,31 @@
 
 .techHeader{
     display: flex;
+    align-items: center;
     justify-content: center; 
     padding: 0.5rem;
     font-weight: lighter;
 }
 
 .techniqueContainer {
-    display:inline-block;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 18%;
     margin-top: 5rem;
     border: solid 0.2rem;
     border-radius: 0.3rem;
 }
+.techniqueBox{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+}
 
 .techBox{
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 2rem;
     padding: 0.5rem;
-    width: 20rem;
     background-color: rgb(173, 161, 161);
     font-size: larger;
     cursor: pointer;

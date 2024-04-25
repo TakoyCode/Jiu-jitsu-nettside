@@ -21,7 +21,11 @@
 }
 
 .sessionViewBtn {
-    margin-left: 58.5rem;
     margin-bottom: 2rem;
     cursor: pointer;
+}
+.sessionViewBtnBox{
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }

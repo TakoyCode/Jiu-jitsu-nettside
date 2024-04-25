@@ -8,13 +8,14 @@
     justify-content: center;
     cursor: pointer;
     font-size: large;
-    border: solid 0.1rem;
-    width: 30rem;
     height: 15rem;
     padding: 0.5rem;
-    margin-left: 32rem;
     margin-top: 2rem;
 
+}
+.chosenSessionSmallerBox{
+    border: solid 0.1rem;
+    width: 30rem;
 }
 
 .chosenSessionHeader {
@@ -22,17 +23,26 @@
     display: grid;
     justify-content: center;
 }
-
-.chosenSessionBtn {
-    margin-left: 27rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
+.chosenSessionBtnDeleteBox{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0.5rem;
+    
 }
-
+.chosenSessionBtn{
+   cursor: pointer; 
+}
 .chosenSessionBtnBack {
-    position: absolute;
     margin-bottom: 2rem;
     cursor: pointer;
+}
+.chosenSessionBtnBackBox{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    padding: 0.5rem;
 }
 
 .chosenSessionSlide {
