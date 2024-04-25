@@ -6,10 +6,10 @@ function sessionView() {
     ${createNavBar()}
     <h1 class="sessionViewHeader">Egne økter</h1>
     <hr style="width: 20%"/>
-
-    <button class="sessionViewBtn" onclick="goToPage('createSessionView')">+</button>
     
-    <div class="sessionViewContainer">
+    <div class="sessionViewContainer"><div class="sessionViewBtnBox">
+    <button class="sessionViewBtn" onclick="goToPage('createSessionView')">+</button>
+    </div>
         ${createSessionViewSessions()}
     </div>
     `;

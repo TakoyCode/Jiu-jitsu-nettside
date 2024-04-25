@@ -2,14 +2,14 @@
 const model = {
 
     app: {
-        currentPage: "popUp",
+        currentPage: null,
         user: "Meg",
         currentTechnique: null,
     },
 
     inputs: {
         filter: {
-            type: "",
+            category: -1,
             direction: 0,
         },
 

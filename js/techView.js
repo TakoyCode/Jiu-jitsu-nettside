@@ -17,7 +17,7 @@ function createTechniqueVideoshtml() {
         html += /*HTML*/ `
 
         <div class="techniqueContainer">
-
+          <div class="techriqueBox">
             <div class="techBox">VIDEO NAVN</div>
             
                 <div class="techBox">Beherskelses nivå: 
@@ -28,6 +28,7 @@ function createTechniqueVideoshtml() {
                 <video class="techBox" width="200rem" controls>
                     <source src="${model.data.videos[technique.videos[i]].mediaPath}">
                 </video>
+                </div>
             </div>
         </div>    
     `;
