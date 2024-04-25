@@ -47,13 +47,13 @@ function changeMasteryLevel(index) {
 function getLevelEmoji(level) {
     let html = ``;
     switch (level) {
-        case 1:
+        case 0:
             html = "🟥"
             break;
-        case 2:
+        case 1:
             html = "🟨"
             break;
-        case 3:
+        case 2:
             html = "🟩"
             break;
 
