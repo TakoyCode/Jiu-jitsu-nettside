@@ -36,10 +36,10 @@ function createTechniqueVideoshtml() {
 }
 
 function changeMasteryLevel(index) {
-    if (model.data.videos[index].masteryLevel < 3) {
+    if (model.data.videos[index].masteryLevel < 2) {
         model.data.videos[index].masteryLevel++;
     } else {
-        model.data.videos[index].masteryLevel = 1;
+        model.data.videos[index].masteryLevel = 0;
     }
     updateView();
 }

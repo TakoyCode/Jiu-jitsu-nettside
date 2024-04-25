@@ -48,6 +48,7 @@ function calculateAverageMastery() { // Brukes til å kalkulere prosent fullfør
 
     const average = sum / model.data.belt.oneMaxExp;
     model.data.belt.percentageToNext = average * 100;
+    console.log(model.data.belt.percentageToNext)
 
     
 
