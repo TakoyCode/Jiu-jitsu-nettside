@@ -117,7 +117,12 @@ function createSelectebleVideosHtml() {
         
         <div class="vidPreviewWrapper">
             <video class="vidPreview" src="${model.data.videos[i].mediaPath}" onclick="addVideo(${i})"></video>
-            <div class="vidPreviewFooter">test</div>
+            <div class="vidPreviewFooter">
+                <b>Name:</b> ${model.data.videos[i].name} 
+                <b>level:</b> ${model.data.videos[i].relBelt}.kyu 
+                <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[i].masteryLevel)}
+                <b>Category:</b> ${model.data.categories[model.data.videos[i].categories[0]]}
+            </div>
         </div>
         `;
     }
