@@ -38,7 +38,7 @@ function createSessionHtml() {
             </div>
             <div class="createSessionAddVideoContainer">
                 <label>Teknikk-videoer: </label>
-                <div class="createSessionAddVideo" onclick="createSelVideosView();">+</div>
+                <div class="createSessionAddVideo" onclick="goToPage('selectVideosView')">+</div>
             </div>
             <div class="chosenVideoPreviewContainer">
                 ${showSelectedVideosHtml()}
@@ -143,7 +143,6 @@ function createSelectebleVideosHtml() {
         `;
         }
     }
-
     return html;
 }
 
