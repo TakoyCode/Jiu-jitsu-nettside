@@ -5,9 +5,21 @@ function updateView() {
     else if (model.app.currentPage == "chosenSessionView") chosenSessionView();
     else if (model.app.currentPage == "popUp") createSelVideosView();
     else if (model.app.currentPage == "techniqueView") techniqueView();
+
+    window.addEventListener('popstate', onBackButtonEvent);
+    history.pushState('mock','mock','mock');
+
+
+}
+function onBackButtonEvent() {
+    
+    goToPage(model.app.previousPage);
+    
+
 }
 
 function goToPage(page) {
+    model.app.previousPage = model.app.currentPage;
     model.app.currentPage = page;
     updateView();
 }
@@ -128,7 +140,5 @@ function calculateMaxMastery() {
         };
     };
 }
-
-
 
 
