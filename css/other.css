@@ -42,6 +42,10 @@
     scale: 1.1;
 }
 
+.sortIconFlipped {
+    transform: scaleY(-1);
+}
+
 .selVideoFilter>p {
     display: flex;
     align-content: center;

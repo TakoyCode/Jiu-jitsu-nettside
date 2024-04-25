@@ -3,7 +3,7 @@ function updateView() {
     else if (model.app.currentPage == "sessionView") sessionView();
     else if (model.app.currentPage == "createSessionView") createSessionView();
     else if (model.app.currentPage == "chosenSessionView") chosenSessionView();
-    else if (model.app.currentPage == "popUp") createSelVideosView();
+    else if (model.app.currentPage == "selectVideosView") createSelVideosView();
     else if (model.app.currentPage == "techniqueView") techniqueView();
 
     window.addEventListener('popstate', onBackButtonEvent);
@@ -60,10 +60,10 @@ function calculateAverageMastery() { // Brukes til å kalkulere prosent fullfør
 
     const average = sum / model.data.belt.oneMaxExp;
     model.data.belt.percentageToNext = average * 100;
-    
+
     const user = model.data.users[0];
 
-    if(model.data.belt.percentageToNext >= 97) {
+    if (model.data.belt.percentageToNext >= 97) {
         user.level = user.level - 1;
         updateView();
 
@@ -71,22 +71,22 @@ function calculateAverageMastery() { // Brukes til å kalkulere prosent fullfør
 }
 
 function giveBeltColor() {
-    
-    switch(model.data.users[0].level) {
-        case 1: 
-        return 'brownBelt';
-        
-        case 2: 
-        return 'blueBelt'
 
-        case 3: 
-        return 'greenBelt'
+    switch (model.data.users[0].level) {
+        case 1:
+            return 'brownBelt';
 
-        case 4: 
-        return 'orangeBelt'
+        case 2:
+            return 'blueBelt'
 
-        case 5: 
-        return 'yellowBelt'
+        case 3:
+            return 'greenBelt'
+
+        case 4:
+            return 'orangeBelt'
+
+        case 5:
+            return 'yellowBelt'
     }
 
 }

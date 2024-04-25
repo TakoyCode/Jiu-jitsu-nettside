@@ -10,6 +10,8 @@ const model = {
     inputs: {
         filter: {
             category: -1,
+            masteryLevel: 1,
+            beltLevel: 1,
             direction: 0,
         },
 
