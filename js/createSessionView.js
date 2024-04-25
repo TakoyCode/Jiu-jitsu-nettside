@@ -155,10 +155,10 @@ function createVideoSelectFilterHtml() {
                     <b>Filter</b>
                 </p> 
                 <p style="margin-left: 1rem;">
-                    Nivå: <img class="sortIcon"src="asc.png" onclick="">
+                    Nivå: <img class="sortIcon ${model.inputs.filter.masteryLevel == -1 ? "sortIconFlipped" : ""}"src="asc.png" onclick="filterByMasteryLevel()">
                 </p>
                 <p style="margin-left: 2rem;">
-                    Belte: <img class="sortIcon"src="asc.png" onclick="">
+                    Belte: <img class="sortIcon ${model.inputs.filter.beltLevel == -1 ? "sortIconFlipped" : ""}"src="asc.png" onclick="filterByBeltLevel()">
                 </p>
                 <p style="margin-left: 2rem;">
                     Kategori: 
