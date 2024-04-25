@@ -52,7 +52,7 @@ function calculateAverageMastery() { // Brukes til å kalkulere prosent fullfør
     const user = model.data.users[0];
 
     if(model.data.belt.percentageToNext >= 97) {
-        user.level = user.level + 1;
+        user.level = user.level - 1;
         updateView();
 
     }

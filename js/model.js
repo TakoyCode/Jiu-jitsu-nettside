@@ -44,7 +44,7 @@ const model = {
         users: [
             {
                 name: "Meg",
-                level: 1,
+                level: 5,
                 percentToNextBelt: 0,
                 sessions: [
                     {
