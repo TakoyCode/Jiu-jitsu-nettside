@@ -30,7 +30,7 @@ function createSessionViewSessions() {
     return html;
 }
 
-function goToChosenSession(index){
+function goToChosenSession(index) {
     model.data.chosenSessionIndex = index;
     goToPage('chosenSessionView');
 }

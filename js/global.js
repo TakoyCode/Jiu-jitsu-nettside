@@ -7,14 +7,14 @@ function updateView() {
     else if (model.app.currentPage == "techniqueView") techniqueView();
 
     window.addEventListener('popstate', onBackButtonEvent);
-    history.pushState('','','');
+    history.pushState('', '', '');
 
 
 }
 function onBackButtonEvent() {
-    
+
     goToPage(model.app.previousPage);
-    
+
 
 }
 
@@ -27,11 +27,11 @@ function goToPage(page) {
 function createNavBar() {
     calculateAverageMastery();
     return /*HTML*/ `
-    
+    <div class="navBar-wrap">
     <div class="navBar">
         <div class="navButtonHolder">
-            <button onclick="goToPage(null)">Main</button>
-            <button onclick="goToPage('sessionView')">Økter</button>
+            <button onclick="goToPage(null)" class="nav-buttons">Main</button>
+            <button onclick="goToPage('sessionView') "class="nav-buttons">Økter</button>
         </div>
         <div class="progressBarContainer">
             <div class="beltLevel ${giveBeltColor()}">${model.data.users[0].level}</div>
@@ -41,6 +41,7 @@ function createNavBar() {
             </div>
             <div>${Math.floor(model.data.belt.percentageToNext)}%</div>
         </div>
+    </div>
     </div>
     `;
 }

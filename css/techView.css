@@ -1,12 +1,4 @@
-
-/*.tech-redirect-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.technique-redirect {
+/*.technique-redirect {
     color: currentColor;
     filter: brightness(115%);
     animation: fadeIn 0.3s;
@@ -24,25 +16,27 @@
         opacity: 1;
     }
 
-}*/
+}
 
-.techHeader{
+*/
+.techHeader {
     display: flex;
-    align-items: center;
-    justify-content: center; 
+    align-content: center;
+    justify-content: center;
     padding: 0.5rem;
+
 }
 
 .techniqueContainer {
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     gap: 5rem;
     margin-top: 5rem;
 }
 
-.techniqueBox{
-    display:grid;
+.techniqueBox {
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 20rem;
@@ -50,9 +44,23 @@
     padding: 1rem;
 }
 
-.techBox{
+.techBox {
     display: grid;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
+}
+
+.technique-redirect {
+    color: currentColor;
+    filter: brightness(115%);
+    font-weight: normal;
+}
+
+
+.tech-redirect-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }

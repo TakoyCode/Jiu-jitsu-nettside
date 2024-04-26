@@ -1,20 +1,26 @@
 body {
     background-color: rgb(69, 69, 69);
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     user-select: none;
     overflow-x: hidden;
 }
 
+.navBar-wrap {
+    display: flex;
+    justify-content: center;
+
+}
+
 .navBar {
     background-color: rgb(238, 238, 238);
-    width: 100%;
+    width: 95%;
     height: 4rem;
     margin-top: 2rem;
     border: 0.15rem solid rgb(113, 113, 113);
-
     display: flex;
     align-items: center;
+    border-radius: 1rem;
 }
 
 .navButtonHolder>button {
@@ -65,4 +71,15 @@ body {
 .progressBarText {
     width: 5rem;
     color: rgb(89, 89, 89);
+}
+
+.nav-buttons {
+    border-radius: 0.82rem;
+    border: 1.2px solid rgba(0, 0, 0, 0.363);
+
+}
+
+.nav-buttons:hover {
+    cursor: pointer;
+    filter: brightness(90%);
 }

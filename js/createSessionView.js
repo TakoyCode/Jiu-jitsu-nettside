@@ -3,9 +3,9 @@ function createSessionView() {
     let html = "";
     html += /*HTML*/`
 
-        <div class="centerElements">
         ${createNavBar()}
-        ${createSessionHtml()}
+        <div class="centerElements">
+            ${createSessionHtml()}
         </div>
     
 `;
@@ -14,9 +14,9 @@ function createSessionView() {
 
 function createSessionHtml() {
     return /*Html*/ `
-        <div class="createSessionTittle centerElements">
-            <div>Opprett økt</div>
-            <hr style="width: 30rem;"/>   
+        <div class="centerElements">
+            <h1 class="createSessionTittle">Opprett økt</h1>
+            <hr style="width: 23rem;"/>   
         </div>
         <div class="createSessionWrapper">
             <div class="createSessionInputContainer">
