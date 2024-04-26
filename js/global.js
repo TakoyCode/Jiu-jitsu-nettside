@@ -7,7 +7,7 @@ function updateView() {
     else if (model.app.currentPage == "techniqueView") techniqueView();
 
     window.addEventListener('popstate', onBackButtonEvent);
-    history.pushState('mock','mock','mock');
+    history.pushState('','','');
 
 
 }

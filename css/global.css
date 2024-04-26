@@ -3,7 +3,7 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navBar {
