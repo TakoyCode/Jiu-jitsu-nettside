@@ -93,10 +93,7 @@ function createSelectVideosHTML() {
 
 function createSelectVideoPage() {
     return /*HTML*/ `
-        <div class="selectVidPageContainer">
-            <img class="vidPageGoLeft"src="nextPage.png">
-            <span class="currentVidSelPage">1</span>
-            <img class="vidPageGoRight"src="nextPage.png">        
+        <div class="selectVidPageContainer">      
         </div>
     `;
 }
