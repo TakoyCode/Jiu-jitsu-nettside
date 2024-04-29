@@ -1,5 +1,5 @@
 
-function chosenSessionView(){
+function chosenSessionView() {
     const app = document.getElementById("app")
     let html = "";
     const session = model.data.users[0].sessions[model.data.chosenSessionIndex]
@@ -17,10 +17,10 @@ function chosenSessionView(){
     </div>
 `;
 
-app.innerHTML = html;
+    app.innerHTML = html;
 }
 
-function chosenSessionViewHtml(){
+function chosenSessionViewHtml() {
     const session = model.data.users[0].sessions[model.data.chosenSessionIndex];
     return /*html*/ `
         <div>

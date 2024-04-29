@@ -64,10 +64,10 @@ function showSelectedVideosHtml() {
             <div class="selectedVidWrapper">
                 <video class="selectedVideo"src="${model.data.videos[model.inputs.session.media[i]].mediaPath}" onclick="removeVideo(${i})"></video>
                 <div class="vidPreviewFooter">
-                    <b>Name:</b> ${model.data.videos[i].name} 
-                    <b>level:</b> ${model.data.videos[i].relBelt}.kyu 
-                    <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[i].masteryLevel)}
-                    <b>Category:</b> ${model.data.categories[model.data.videos[i].categories[0]]}
+                    <b>Name:</b> ${model.data.videos[model.inputs.session.media[i]].name} 
+                    <b>level:</b> ${model.data.videos[model.inputs.session.media[i]].relBelt}.kyu 
+                    <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[model.inputs.session.media[i]].masteryLevel)}
+                    <b>Category:</b> ${model.data.categories[model.data.videos[model.inputs.session.media[i]].categories[0]]}
                 </div>
             </div>
         `;
