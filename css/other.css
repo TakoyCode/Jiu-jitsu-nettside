@@ -13,7 +13,7 @@
 .videoSelContainer {
     display: flex;
     flex-direction: column;
-    background-color: goldenrod;
+    background-color: rgb(194, 194, 194);
     height: 50rem;
     width: 90rem;
     border-radius: 2rem;
