@@ -147,21 +147,46 @@
 .chosenVideoPreviewContainer {
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow-y: scroll;
     overflow-x: hidden;
     width: 21.6rem;
     height: 15.3rem;
 }
 
-.vidPreviewSmall {
-scale: 0.95;
+.createVideoPreviewBtn {
+    border-radius: 10%;
+    cursor: pointer;
 }
 
-.vidPreviewSmall:hover {
+.selectedVidWrapper {
+    width: 20rem;
+    height: 15rem;
+    position: relative;
+    font-size: 65%;
+    scale: 0.95;
+}
+
+.selectedVidWrapper:hover {
     outline: 0.2rem solid rgb(94, 9, 9);
     border-radius: 0.4rem;
 }
-.createVideoPreviewBtn{
-    border-radius: 10%;
-    cursor: pointer;
+
+.selectedVidFooter {
+    position: absolute;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 10%;
+    top: 0;
+    left: 0;
+    border-radius: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.selectedVideo {
+    border-radius: 0.4rem;
 }

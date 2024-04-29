@@ -4,9 +4,7 @@ function createSessionView() {
     html += /*HTML*/`
 
         ${createNavBar()}
-        <div class="centerElements">
-            ${createSessionHtml()}
-        </div>
+        ${createSessionHtml()}
     
 `;
     app.innerHTML = html;
@@ -14,46 +12,48 @@ function createSessionView() {
 
 function createSessionHtml() {
     return /*Html*/ `
-        <div class="centerElements">
-            <h1 class="createSessionTittle">Opprett økt</h1>
-            <hr style="width: 23rem;"/>   
-        </div>
-        <div class="createSessionWrapper">
-            <div class="createSessionInputContainer">
-                <div class="createSessionInputDiv">
-                    <label>Øktnavn:</label>
-                    <input oninput="model.inputs.session.name = this.value"
-                    value = "${model.inputs.session.name ?? ""}">
+            <div class="centerElements">
+                <div class="centerElements">
+                    <h1 class="createSessionTittle">Opprett økt</h1>
+                    <hr style="width: 23rem;"/>   
                 </div>
-                <div class="createSessionInputDiv">
-                    <label style="margin-right:1rem">Beltenivå:</label>
-                        <select name="Kategori" id="beltLevelDrop" onchange="model.inputs.session.level = this.value";>
-                        <option disabled selected>Please select a beltlevel</option>
-                        <option value ="5 kyu">5 Kyu</option>
-                        <option value = "4 kyu">4 Kyu</option>
-                        <option value = "3 kyu">3 Kyu</option>
-                        <option value = "2 kyu">2 Kyu</option>
-                        <option value = "1 kyu">1 Kyu</option>
-                </select>
+                <div class="createSessionWrapper">
+                    <div class="createSessionInputContainer">
+                        <div class="createSessionInputDiv">
+                            <label>Øktnavn:</label>
+                            <input oninput="model.inputs.session.name = this.value"
+                            value = "${model.inputs.session.name ?? ""}">
+                        </div>
+                        <div class="createSessionInputDiv">
+                            <label>Beltenivå:</label>
+                            <select name="Kategori" id="beltLevelDrop" onchange="model.inputs.session.level = this.value";>
+                                <option disabled selected>Please select a beltlevel</option>
+                                <option value ="5 kyu">5 Kyu</option>
+                                <option value = "4 kyu">4 Kyu</option>
+                                <option value = "3 kyu">3 Kyu</option>
+                                <option value = "2 kyu">2 Kyu</option>
+                                <option value = "1 kyu">1 Kyu</option>
+                            </select>
+                        </div>
+                        <div class="createSessionInputDiv">
+                            <label>Beskrivelse:</label>
+                            <input oninput="model.inputs.session.description = this.value"
+                                value = "${model.inputs.session.description ?? ""}">
+                        </div>
+                    </div>
+                    <div class="createSessionAddVideoContainer">
+                        <label>Teknikk-videoer: </label>
+                        <div class="createSessionAddVideo" onclick="goToPage('selectVideosView')">+</div>
+                    </div>
+                    <div class="${model.inputs.session.media.length == 0 ? "" : "chosenVideoPreviewContainer"}">
+                        ${showSelectedVideosHtml()}
+                    </div>
+                    <div class="createSessionInputDiv">
+                        <button onclick="goToPage('sessionView')">Tilbake</button>
+                        <button onclick="addSession()">Legg til økt</button>
+                    </div>
                 </div>
-                <div class="createSessionInputDiv">
-                    <label>Beskrivelse:</label>
-                    <input oninput="model.inputs.session.description = this.value"
-                        value = "${model.inputs.session.description ?? ""}">
-                </div>
             </div>
-            <div class="createSessionAddVideoContainer">
-                <label>Teknikk-videoer: </label>
-                <div class="createSessionAddVideo" onclick="goToPage('selectVideosView')">+</div>
-            </div>
-            <div class="chosenVideoPreviewContainer">
-                ${showSelectedVideosHtml()}
-            </div>
-            <div class="createSessionInputDiv">
-                <button onclick="goToPage('sessionView')">Tilbake</button>
-                <button onclick="addSession()">Legg til økt</button>
-            </div>
-        </div>
     `;
 }
 
@@ -61,9 +61,15 @@ function showSelectedVideosHtml() {
     let html = '';
     for (let i = 0; i < model.inputs.session.media.length; i++) {
         html += /*HTML*/ `
-        
-        <video class="vidPreviewSmall"src="${model.data.videos[model.inputs.session.media[i]].mediaPath}" onclick="removeVideo(${i})"></video>
-
+            <div class="selectedVidWrapper">
+                <video class="selectedVideo"src="${model.data.videos[model.inputs.session.media[i]].mediaPath}" onclick="removeVideo(${i})"></video>
+                <div class="vidPreviewFooter">
+                    <b>Name:</b> ${model.data.videos[i].name} 
+                    <b>level:</b> ${model.data.videos[i].relBelt}.kyu 
+                    <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[i].masteryLevel)}
+                    <b>Category:</b> ${model.data.categories[model.data.videos[i].categories[0]]}
+                </div>
+            </div>
         `;
     }
     return html;
