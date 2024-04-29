@@ -18,7 +18,7 @@ function createTechniqueVideoshtml() {
     for (let i = 0; i < technique.videos.length; i++) {
         html += /*HTML*/ `
         <div class="techniqueBox">
-            <div class="techBox">VIDEO NAVN</div>
+            <div class="techBox">${model.data.videos[technique.videos[i]].name}</div>
             <div class="techBox">
                 <div onclick="changeMasteryLevel(${technique.videos[i]})" class="selectable">Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
                 </div>
