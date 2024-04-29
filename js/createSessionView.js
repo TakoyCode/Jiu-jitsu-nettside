@@ -96,7 +96,8 @@ function createSelectVideosHTML() {
             <div class="videoSelContainer">
                 ${createVideoSelectFilterHtml()}
                 ${createVideoPreviewHtml()}
-            </div>
+                <div class="selectVidPageContainer"></div>
+                </div>
         </div>
     `;
 }

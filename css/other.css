@@ -110,7 +110,7 @@
     align-self: center;
     flex-direction: row;
     justify-self: center;
-
+    height: 13rem;
 }
 
 .vidPageGoLeft {
