@@ -26,9 +26,15 @@ function createSessionHtml() {
                     value = "${model.inputs.session.name ?? ""}">
                 </div>
                 <div class="createSessionInputDiv">
-                    <label>Beltenivå:</label>
-                    <input oninput="model.inputs.session.level = this.value"
-                    value = "${model.inputs.session.level ?? ""}">
+                    <label style="margin-right:1rem">Beltenivå:</label>
+                        <select name="Kategori" id="beltLevelDrop" onchange="model.inputs.session.level = this.value";>
+                        <option disabled selected>Please select a beltlevel</option>
+                        <option value ="5 kyu">5 Kyu</option>
+                        <option value = "4 kyu">4 Kyu</option>
+                        <option value = "3 kyu">3 Kyu</option>
+                        <option value = "2 kyu">2 Kyu</option>
+                        <option value = "1 kyu">1 Kyu</option>
+                </select>
                 </div>
                 <div class="createSessionInputDiv">
                     <label>Beskrivelse:</label>

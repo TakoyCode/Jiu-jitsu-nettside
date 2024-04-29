@@ -21,9 +21,18 @@ function createSessionViewSessions() {
     const user = model.data.users[0];
     for (i = 0; i < user.sessions.length; i++) {
         const session = user.sessions[i];
+        console.log(session.name)
+        const backgroundColor = session.level === "5 kyu" ? 'yellowBelt' :
+    session.level === "4 kyu" ? 'orangeBelt' :
+    session.level === "3 kyu" ? 'greenBelt' :
+    session.level === "2 kyu" ? 'blueBelt' :
+    session.level === "1 kyu" ? 'brownBelt' :
+    'transparent';
+
+
         html += /*HTML*/ `
         
-        <div class ="sessionViewBox" onclick="goToChosenSession(${i})">${session.name}</div>
+        <div class ="sessionViewBox ${backgroundColor}" onclick="goToChosenSession(${i})">${session.name}</div>
         
         `;
     }

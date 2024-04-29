@@ -1,5 +1,7 @@
 function addSession() {
     const user = model.data.users[0];
+    if(model.inputs.session.name == null || model.inputs.session.name == '') {alert('Please enter a session name'); return;}
+    if(model.inputs.session.level == null) {alert('Please add beltlevel'); return;}
     user.sessions.push(JSON.parse(JSON.stringify(model.inputs.session)));
     emptyCreateSessionInputs();
     goToPage('sessionView');
