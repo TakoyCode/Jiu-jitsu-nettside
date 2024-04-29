@@ -65,7 +65,7 @@ function getLevelEmoji(level) {
 }
 
 
-/*      Anderledeses metode å skrive .find på
+/*      annerledes metode å skrive .find på
 function findTechnique(name) {
     for (let i = 0; i < model.data.techniques.length; i++) {
         if (model.data.techniques[i].name == name) {

@@ -19,7 +19,8 @@
 input {
     border-radius: 2rem;
     border-width: 1px;
-    height: 1.2rem;
+    height: 1rem;
+    padding: 5px;
 }
 
 #beltLevelDrop {
