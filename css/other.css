@@ -23,9 +23,9 @@
 .selVideoFilter {
     align-self: center;
     display: flex;
-    margin-top: 2%;
+    margin-top: 3%;
     height: auto;
-    width: 32rem;
+    width: 50rem;
     border: 0.11rem hsla(0, 0%, 0%, 0.281) solid;
     align-content: center;
     align-items: center;
@@ -160,4 +160,8 @@ scale: 0.95;
 .vidPreviewSmall:hover {
     outline: 0.2rem solid rgb(94, 9, 9);
     border-radius: 0.4rem;
+}
+.createVideoPreviewBtn{
+    border-radius: 10%;
+    cursor: pointer;
 }

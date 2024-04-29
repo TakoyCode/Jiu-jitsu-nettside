@@ -81,19 +81,10 @@ function createSelVideosView() {
 function createSelectVideosHTML() {
     return /*html*/`
         <div class="addVideoBlur">
-            <button onclick="goToPage('createSessionView')">BACK - Placeholder</button>
             <div class="videoSelContainer">
                 ${createVideoSelectFilterHtml()}
                 ${createVideoPreviewHtml()}
-                ${createSelectVideoPage()}
             </div>
-        </div>
-    `;
-}
-
-function createSelectVideoPage() {
-    return /*HTML*/ `
-        <div class="selectVidPageContainer">      
         </div>
     `;
 }
@@ -146,7 +137,8 @@ function createSelectebleVideosHtml() {
 function createVideoSelectFilterHtml() {
     const filterType = model.inputs.filter.category;
     return /*HTML*/ `
-        <div class="selVideoFilter">
+    <div class="selVideoFilter">
+        <button class="createVideoPreviewBtn"onclick="goToPage('createSessionView')">Tilbake</button>
                 <p style="margin-left: 1%">
                     <b>Filter</b>
                 </p> 
