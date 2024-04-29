@@ -56,7 +56,7 @@ function showSelectedVideosHtml() {
     for (let i = 0; i < model.inputs.session.media.length; i++) {
         html += /*HTML*/ `
         
-        <video src="${model.data.videos[model.inputs.session.media[i]].mediaPath}"></video>
+        <video class="vidPreviewSmall"src="${model.data.videos[model.inputs.session.media[i]].mediaPath}" onclick="removeVideo(${i})"></video>
 
         `;
     }

@@ -18,6 +18,13 @@ function addVideo(index) {
     goToPage('createSessionView');
 }
 
+function removeVideo(index) {
+    model.inputs.session.media.splice(index, 1)
+    goToPage('createSessionView');
+}
+
+
+
 function changeFilterType(filterIndex) {
     console.log(filterIndex)
     model.inputs.filter.category = filterIndex;

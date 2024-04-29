@@ -145,8 +145,19 @@
 }
 
 .chosenVideoPreviewContainer {
+    display: flex;
+    flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 21.2rem;
+    width: 21.6rem;
     height: 15.3rem;
+}
+
+.vidPreviewSmall {
+scale: 0.95;
+}
+
+.vidPreviewSmall:hover {
+    outline: 0.2rem solid rgb(94, 9, 9);
+    border-radius: 0.4rem;
 }

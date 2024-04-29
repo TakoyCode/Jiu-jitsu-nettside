@@ -20,7 +20,7 @@ function createTechniqueVideoshtml() {
         <div class="techniqueBox">
             <div class="techBox">VIDEO NAVN</div>
             <div class="techBox">
-                <div onclick="changeMasteryLevel(${technique.videos[i]})">Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
+                <div onclick="changeMasteryLevel(${technique.videos[i]})" class="selectable">Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
                 </div>
             </div>
 
@@ -36,6 +36,7 @@ function createTechniqueVideoshtml() {
 
 function changeMasteryLevel(index) {
     if (model.data.videos[index].masteryLevel < 2) {
+        
         model.data.videos[index].masteryLevel++;
     } else {
         model.data.videos[index].masteryLevel = 0;
