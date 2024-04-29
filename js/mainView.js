@@ -13,21 +13,28 @@ function mainView() {
 function createBeltHtml() {
     return /*html*/`
         <div class ="beltContainerMain">
-            <div class="beltBoxMain yellowBelt selectedBelt">5.kyu - Gult belte
-            ${createDropdownBeltHtml("belt5")}
+
+            <div class="beltBoxes">
+              <div class="beltBoxHeader yellowBelt">5.kyu - Gult belte</div>
+              <div class="beltBoxMain yellowBelt selectedBelt">${createDropdownBeltHtml("belt5")}</div>
             </div>
-            <div class="beltBoxMain orangeBelt selectedBelt">4.kyu - Oransje belte
-            ${createDropdownBeltHtml("belt4")}
+            <div class="beltBoxes">
+              <div class="beltBoxHeader orangeBelt">4.kyu - Oransje belte</div>
+              <div class="beltBoxMain orangeBelt selectedBelt">${createDropdownBeltHtml("belt4")}</div>
             </div>
-            <div class="beltBoxMain greenBelt selectedBelt">3.kyu - Grønt belte
-            ${createDropdownBeltHtml("belt3")}
+            <div class="beltBoxes">
+              <div class="beltBoxHeader greenBelt">3.kyu - Grønt belte</div>
+              <div class="beltBoxMain greenBelt selectedBelt">${createDropdownBeltHtml("belt3")}</div>
             </div>
-            <div class="beltBoxMain blueBelt selectedBelt">2.kyu - Blått belte
-            ${createDropdownBeltHtml("belt2")}
+            <div class="beltBoxes">
+              <div class="beltBoxHeader blueBelt">2.kyu - Blått belte</div>
+              <div class="beltBoxMain blueBelt selectedBelt">${createDropdownBeltHtml("belt2")}</div>
             </div>
-            <div class="beltBoxMain brownBelt selectedBelt">1.kyu - Brunt belte
-            ${createDropdownBeltHtml("belt1")}
+            <div class="beltBoxes">
+              <div class="beltBoxHeader brownBelt">1.kyu - Brunt belte</div>
+              <div class="beltBoxMain brownBelt selectedBelt">${createDropdownBeltHtml("belt1")}</div>
             </div>
+            
         </div>
 `;
 }
