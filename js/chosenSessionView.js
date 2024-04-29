@@ -33,7 +33,21 @@ function chosenSessionViewHtml() {
             <div class="chosenSessionBox">Nivå: ${session.level}</div>
             <div class="chosenSessionBox">${session.description}</div>
             <div class="chosenSessionBox">${session.name}</div>
-            <div class="chosenSessionBox">VIDEO</div>
+            <div class="chosenSessionBox">${createSessionViewVideos()}</div>
         </div>
     `;
+}
+
+function createSessionViewVideos() {
+    const currentSession = model.data.users[0].sessions[model.data.chosenSessionIndex]
+    let html = "";
+    for (let i = 0; i < currentSession.media.length; i++) {
+        html += /*HTML*/`
+        
+        <video class="techBox" width="200rem" controls>
+            <source src="${model.data.videos[currentSession.media[i]].mediaPath}">
+        </video>
+        `;
+    }
+    return html;
 }

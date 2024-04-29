@@ -2,7 +2,7 @@
 const model = {
 
     app: {
-        currentPage: "createSessionView",
+        currentPage: "chosenSessionView",
         previousPage: null,
         user: "Meg",
         currentTechnique: null,
@@ -32,7 +32,7 @@ const model = {
     data: {
         clickedBelt: null,
         beltCategoryOpen: false,
-        chosenSessionIndex: null,
+        chosenSessionIndex: 0,
 
         belt: {
             percentageToNext: 0,
