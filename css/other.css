@@ -190,3 +190,14 @@
 .selectedVideo {
     border-radius: 0.4rem;
 }
+
+.createVideoPreviewBtn{
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    box-shadow: 2px 2px rgb(0, 0, 0);
+    font-weight: bolder ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+}
