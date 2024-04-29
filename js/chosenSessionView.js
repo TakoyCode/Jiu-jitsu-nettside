@@ -44,9 +44,17 @@ function createSessionViewVideos() {
     for (let i = 0; i < currentSession.media.length; i++) {
         html += /*HTML*/`
         
-        <video class="techBox" width="200rem" controls>
-            <source src="${model.data.videos[currentSession.media[i]].mediaPath}">
-        </video>
+            <div class="">
+                <video class="techBox" width="200rem" controls>
+                    <source src="${model.data.videos[currentSession.media[i]].mediaPath}">
+                </video>
+                <div class="">
+                    <b>Name:</b> ${model.data.videos[currentSession.media[i]].title} 
+                    <b>level:</b> ${model.data.videos[currentSession.media[i]].relBelt}.kyu 
+                    <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[currentSession.media[i]].masteryLevel)}
+                    <b>Category:</b> ${model.data.categories[model.data.videos[currentSession.media[i]].categories[0]]}
+                </div>
+            </div>
         `;
     }
     return html;
