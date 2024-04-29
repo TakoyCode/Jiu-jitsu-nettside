@@ -43,7 +43,6 @@ function createSessionViewVideos() {
     let html = "";
     for (let i = 0; i < currentSession.media.length; i++) {
         html += /*HTML*/`
-        
             <div class="">
                 <video class="techBox" width="200rem" controls>
                     <source src="${model.data.videos[currentSession.media[i]].mediaPath}">

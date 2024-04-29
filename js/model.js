@@ -66,7 +66,7 @@ const model = {
                         name: "Favoritt økter",
                         level: "5 kyu",
                         description: "Forskjellige økter jeg liker godt",
-                        videos: [0, 1],
+                        media: [0, 1],
                     },
                 ],
             }
