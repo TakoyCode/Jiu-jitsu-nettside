@@ -192,12 +192,16 @@
 }
 
 .createVideoPreviewBtn{
-    border-radius: 10%;
+    margin-bottom: -0.1rem;
+    margin-right: 10rem;
     cursor: pointer;
-    background-color: black;
-    color: white;
-    box-shadow: 2px 2px rgb(0, 0, 0);
-    font-weight: bolder ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: italic;
+    border-radius: 11px;
+    border: 0.5rem;
+    scale: 1.3;
+    padding: 0.5rem;
+}
+
+.createVideoPreviewBtn:hover{
+    scale: 1.2;
+    background-color: rgba(0, 0, 0, 0.1);
 }
