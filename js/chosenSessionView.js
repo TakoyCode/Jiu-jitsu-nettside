@@ -23,16 +23,14 @@ function chosenSessionView() {
 function chosenSessionViewHtml() {
     const session = model.data.users[0].sessions[model.data.chosenSessionIndex];
     return /*html*/ `
-        <div>
         <div class="chosenSessionBtnBackBox">
         <button class ="chosenSessionBtnBack" onclick="goToPage('sessionView')">Tilbake</button>
         </div>
-            <div class="chosenSessionBtnDeleteBox">
-            <button class="chosenSessionBtn" onclick="remove(${i})">Slett</button>
-            </div>
+               <div class="chosenSessionBtnDeleteBox">
+                 <button class="chosenSessionBtn" onclick="remove(${i})">Slett</button>
+               </div>
             <div class="chosenSessionBox">Nivå: ${session.level}</div>
-            <div class="chosenSessionBox">${session.description}</div>
-            <div class="chosenSessionBox">${session.name}</div>
+            <div class="chosenSessionBox">Beskrivelse: ${session.description}</div>
             <div class="chosenSessionBox">${createSessionViewVideos()}</div>
         </div>
     `;
@@ -43,15 +41,12 @@ function createSessionViewVideos() {
     let html = "";
     for (let i = 0; i < currentSession.media.length; i++) {
         html += /*HTML*/`
-            <div class="">
+            <div class="chosenSessionVideoContainer">
                 <video class="techBox" width="200rem" controls>
                     <source src="${model.data.videos[currentSession.media[i]].mediaPath}">
                 </video>
-                <div class="">
-                    <b>Name:</b> ${model.data.videos[currentSession.media[i]].title} 
-                    <b>level:</b> ${model.data.videos[currentSession.media[i]].relBelt}.kyu 
-                    <b>MasteryLevel:</b> ${getLevelEmoji(model.data.videos[currentSession.media[i]].masteryLevel)}
-                    <b>Category:</b> ${model.data.categories[model.data.videos[currentSession.media[i]].categories[0]]}
+                <div class="chosenSessionVideoBox">
+                    ${model.data.videos[currentSession.media[i]].name}
                 </div>
             </div>
         `;

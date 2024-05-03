@@ -5,13 +5,9 @@ body {
     user-select: none;
     overflow-x: hidden;
 }
-
-
-
 .navBar-wrap {
     display: flex;
     justify-content: center;
-
 }
 
 .navBar {
