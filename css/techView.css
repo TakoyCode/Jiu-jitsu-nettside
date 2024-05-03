@@ -18,9 +18,10 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 20rem;
-    border: solid 0.2rem;
+    width: 23rem;
+    border: solid 0.12rem;
     padding: 1rem;
+    border-radius: 1rem;
 }
 
 .techBox {
@@ -28,7 +29,18 @@
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
+    width: 25rem;
+    text-align: center;
+
+}
+
+.viPrøverIgjen {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
     width: 20rem;
+
 }
 
 .technique-redirect {

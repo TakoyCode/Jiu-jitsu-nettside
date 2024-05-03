@@ -17,8 +17,9 @@
 .chosenSessionSmallerBox{
     justify-content: center;
     align-items: center;
-    border: solid 0.1rem;
-    width: 50rem;
+    border: solid 0.12rem;
+    width: 70rem;
+    border-radius: 1rem;
 }
 
 .chosenSessionHeader {

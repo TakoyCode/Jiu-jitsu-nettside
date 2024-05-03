@@ -22,11 +22,12 @@ function createTechniqueVideoshtml() {
             <div class="techBox">
                 <div onclick="changeMasteryLevel(${technique.videos[i]})" class="selectable">Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}
                 </div>
-            </div>
+            
 
-                <video class="techBox" width="200rem" controls>
+                <video class="viPrøverIgjen" controls>
                     <source src="${model.data.videos[technique.videos[i]].mediaPath}">
                 </video>
+                </div>
             </div>
         </div>
     `;

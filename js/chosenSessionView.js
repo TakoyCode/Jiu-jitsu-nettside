@@ -5,7 +5,7 @@ function chosenSessionView() {
     const session = model.data.users[0].sessions[model.data.chosenSessionIndex]
     html = /*HTML*/`
     ${createNavBar()}
-    <h1 class="chosenSessionHeader">${session.name}</h1>
+    <h1 class="chosenSessionHeader" style="color:white;">${session.name}</h1>
     <hr style="width: 20%"/>
 
     <div class="chosenSessionContainer">
@@ -29,7 +29,7 @@ function chosenSessionViewHtml() {
                <div class="chosenSessionBtnDeleteBox">
                  <button class="chosenSessionBtn" onclick="remove(${i})">Slett</button>
                </div>
-            <div class="chosenSessionBox">Nivå: ${session.level}</div>
+            <div class="chosenSessionBox" style="font-size:20px;>Nivå: ${session.level}</div>
             <div class="chosenSessionBox">Beskrivelse: ${session.description}</div>
             <div class="chosenSessionBox">${createSessionViewVideos()}</div>
         </div>
@@ -46,9 +46,8 @@ function createSessionViewVideos() {
                     <source src="${model.data.videos[currentSession.media[i]].mediaPath}">
                 </video>
                 <div class="chosenSessionVideoBox" style="text-align:center;">
-                    ${model.data.videos[currentSession.media[i]].name}<br>
-                    <p>Mastery: ${getLevelEmoji(model.data.videos[currentSession.media[i]].masteryLevel)}</p>
-                    
+                    <div style="font-size:20px;">${model.data.videos[currentSession.media[i]].name}</div>
+                    <p onclick="">Beherskelsesgrad: ${getLevelEmoji(model.data.videos[currentSession.media[i]].masteryLevel)}</p>
                 </div>
             </div>
         `;
