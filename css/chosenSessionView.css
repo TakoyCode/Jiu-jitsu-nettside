@@ -25,8 +25,9 @@
     width: 70rem;
     border-radius: 1rem;
     height: 38rem;
-    overflow-x: scroll;
+    overflow-x: auto;
     overflow-y: hidden;
+    
 }
 
 .chosenSessionHeader {

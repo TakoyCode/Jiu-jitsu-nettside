@@ -14,7 +14,7 @@ function createSessionHtml() {
     return /*Html*/ `
             <div class="centerElements">
                 <div class="centerElements">
-                    <h1 class="createSessionTitle">Opprett økt</h1>
+                    <h1 class="createSessionTitle" style="color:${model.app.darkMode ? "":"white"};">Opprett økt</h1>
                     <hr style="width: 23rem;"/>   
                 </div>
                 <div class="createSessionWrapper">
