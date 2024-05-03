@@ -8,7 +8,7 @@ function sessionView() {
     <div class="sessionViewContainer"><div class="sessionViewBtnBox">
     <button class="sessionViewBtn" onclick="goToPage('createSessionView')">+</button>
     </div>
-    <hr style="width: 90%"/>
+    <hr style="width: 23rem"/>
     
 
         ${createSessionViewSessions()}
