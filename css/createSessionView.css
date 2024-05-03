@@ -21,16 +21,16 @@ input {
     border-radius: 2rem;
     border-width: 1px;
     height: 1rem;
+    width: 10.5rem;
     padding: 5px;
 }
 
 #beltLevelDrop {
     border-radius: 2rem;
     border-width: 1px;
-    height: 1.6rem;
+    height: 1.9rem;
+    width: 11.3rem;
     text-align: center;
-    margin-left: 1rem
-
 }
 
 .createSessionInputContainer {
@@ -82,9 +82,9 @@ input {
     border-radius: 0.7rem;
 }
 
-.createSessionAddVideo:hover { 
-scale: 0.9;
-background-color: rgba(0, 0, 0, 0.1);
+.createSessionAddVideo:hover {
+    scale: 0.9;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .createSessionTittle {
