@@ -27,11 +27,11 @@ function chosenSessionViewHtml() {
         <button class ="chosenSessionBtnBack" onclick="goToPage('sessionView')">Tilbake</button>
         </div>
                <div class="chosenSessionBtnDeleteBox">
-                 <button class="chosenSessionBtn" onclick="remove(${i})">Slett</button>
+                 <button class="chosenSessionBtn" onclick="remove(${i})" style="position:fixed;">Slett</button>
                </div>
-            <div class="chosenSessionBox" style="font-size:20px;>Nivå: ${session.level}</div>
+            <div class="chosenSessionBox" style="font-size:20px;">Nivå: ${session.level}</div>
             <div class="chosenSessionBox">Beskrivelse: ${session.description}</div>
-            <div class="chosenSessionBox">${createSessionViewVideos()}</div>
+            <div class="chosenSessionBoxVideo">${createSessionViewVideos()}</div>
         </div>
     `;
 }

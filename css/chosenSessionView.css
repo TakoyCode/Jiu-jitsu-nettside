@@ -4,6 +4,10 @@
     line-height: 3rem;
 }
 
+.chosenSessionBoxVideo {
+    display: flex;
+}
+
 .chosenSessionContainer {
     display: grid;
     justify-content: center;
@@ -20,6 +24,9 @@
     border: solid 0.12rem;
     width: 70rem;
     border-radius: 1rem;
+    height: 38rem;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 .chosenSessionHeader {
