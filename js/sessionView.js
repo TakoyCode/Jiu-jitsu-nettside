@@ -4,7 +4,7 @@ function sessionView() {
     let html = "";
     html += /*HTML*/`
     ${createNavBar()}
-    <h1 class="sessionViewHeader">Egne økter</h1>
+    <h1 class="sessionViewHeader" style="color:${model.app.darkMode ? "":"white"};">Egne økter</h1> <!-- Endret -->
     <div class="sessionViewContainer"><div class="sessionViewBtnBox">
     <button class="sessionViewBtn" onclick="goToPage('createSessionView')">+</button>
     </div>

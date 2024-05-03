@@ -17,7 +17,7 @@ function createTechniqueVideoshtml() {
     const technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique);
     for (let i = 0; i < technique.videos.length; i++) {
         html += /*HTML*/ `
-        <div class="techniqueBox">
+        <div class="techniqueBox" style="color:${model.app.darkMode ? "" : "white"};">
             <div class="techBox">${model.data.videos[technique.videos[i]].name}</div>
             <div class="techBox">
                 <div onclick="changeMasteryLevel(${technique.videos[i]})" class="selectable">Beherskelses nivå: ${getLevelEmoji(model.data.videos[technique.videos[i]].masteryLevel)}

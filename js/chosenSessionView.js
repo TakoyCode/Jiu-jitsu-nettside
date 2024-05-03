@@ -9,7 +9,7 @@ function chosenSessionView() {
     <hr style="width: 20%"/>
 
     <div class="chosenSessionContainer">
-     <div class="chosenSessionBox">
+     <div class="chosenSessionBox" style="color:${model.app.darkMode ? "" : "white"};"> <!-- Endret -->
         <div class="chosenSessionSmallerBox">
         ${chosenSessionViewHtml()}
         </div>

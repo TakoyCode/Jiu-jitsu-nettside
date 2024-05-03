@@ -122,3 +122,27 @@ body {
 *::-webkit-scrollbar-thumb:active {
     background-color: #640000;
 }
+
+.logo-svg {
+    position: fixed;
+    width: 20rem;
+    left: 40%;
+    top: 84%;
+    z-index: -10;
+}
+
+.dark-mode {
+    border-radius: 1rem;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(45deg, black 50%, white 50%);
+    margin-right: -2.5rem;
+    border: 0.1px black solid;
+
+}
+
+.dark-mode:hover {
+    background: linear-gradient(45deg, white 50%, black 50%);
+    scale: 1.1;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.219);
+}

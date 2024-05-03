@@ -6,6 +6,7 @@ const model = {
         previousPage: null,
         user: "Meg",
         currentTechnique: null,
+        darkMode: true,
     },
 
     inputs: {

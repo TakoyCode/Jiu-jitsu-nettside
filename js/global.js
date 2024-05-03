@@ -28,27 +28,30 @@ function createNavBar() {
     calculateAverageMastery();
     return /*HTML*/ `
     <div class="navBar-wrap">
-    <div class="navBar">
+    <div class="navBar" style="background-color:${model.app.darkMode ? "white" : "darkslategray"}"> <!-- Endret -->
         <div class="navButtonHolder">
             <button onclick="goToPage(null)" class="nav-buttons">Main</button>
             <button onclick="goToPage('sessionView') "class="nav-buttons">Økter</button>
         </div>
         <div class="progressBarContainer">
             <div class="beltLevel ${giveBeltColor()}">${model.data.users[0].level}</div>
-            <div class="progressBarText">Prosent til neste nivå</div>
+            <div class="progressBarText" style="color:${model.app.darkMode ? "rgb(89, 89, 89);" : "white"};">Prosent til neste nivå</div> <!-- Endret -->
             <div class="progressBarBackground">
                 <div class="progressBar" style="width:${model.data.belt.percentageToNext}%"></div>
             </div>
             <div>${Math.floor(model.data.belt.percentageToNext)}%</div>
+            <div class="dark-mode" onclick="toggleDarkMode()"></div>
         </div>
+        <div><img style="${model.app.darkMode ? "":"filter:invert(100%)"}" class="logo-svg" src="${model.app.currentPage == "chosenSessionView" ? "": "mysvg.svg"}"/></div> <!-- Endret -->
     </div>
     </div>
+    
     `;
 }
 calculateMaxMastery();
 calculateAverageMastery();
 
-function calculateAverageMastery() { // Brukes til å kalkulere prosent fullført av nåværende nivå. (Gjennomsnitt målt mot maxMastery relevant til belte)
+function calculateAverageMastery() {
     const video = model.data.videos;
     const userLevel = model.data.users[0].level
     let sum = 0;
@@ -143,3 +146,13 @@ function calculateMaxMastery() {
 }
 
 
+
+function updateBodyBackground() {
+    document.body.style.backgroundColor = model.app.darkMode ? "black" : "grey"; // Endret
+}
+
+function toggleDarkMode() {
+    model.app.darkMode = !model.app.darkMode;
+    updateBodyBackground();
+    updateView();
+}
