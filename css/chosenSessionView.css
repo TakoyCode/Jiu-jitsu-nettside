@@ -36,10 +36,14 @@
 }
 .chosenSessionBtn{
    cursor: pointer; 
+   border-radius: 10px;
+    border: none;
 }
 .chosenSessionBtnBack {
     margin-bottom: 2rem;
     cursor: pointer;
+    border-radius: 10px;
+    border: none;
 }
 .chosenSessionBtnBackBox{
     position: absolute;
