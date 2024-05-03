@@ -40,9 +40,9 @@ function createNavBar() {
                 <div class="progressBar" style="width:${model.data.belt.percentageToNext}%"></div>
             </div>
             <div>${Math.floor(model.data.belt.percentageToNext)}%</div>
-            <div class="dark-mode" onclick="toggleDarkMode()"></div>
+            <div class="dark-mode" onclick="toggleDarkMode()" style="${model.app.darkMode ? "background: linear-gradient(45deg, black 50%, white 50%)":"background: linear-gradient(45deg, white 50%, black 50%);"}"></div>
         </div>
-        <div><img style="${model.app.darkMode ? "":"filter:invert(100%)"}" class="logo-svg" src="${model.app.currentPage == "chosenSessionView" ? "": "mysvg.svg"}"/></div> <!-- Endret -->
+        <div style="${model.app.darkMode ? "":"display:none"}"><img style="${model.app.darkMode ? "":"filter:invert(100%)"}" class="logo-svg" src="${model.app.currentPage == "chosenSessionView" ? "": "mysvg.svg"}"/></div> <!-- Endret -->
     </div>
     </div>
     
@@ -148,7 +148,7 @@ function calculateMaxMastery() {
 
 
 function updateBodyBackground() {
-    document.body.style.backgroundColor = model.app.darkMode ? "black" : "grey"; // Endret
+    document.body.style.backgroundColor = model.app.darkMode ? "rgb(27, 27, 27)" : "grey"; // Endret
 }
 
 function toggleDarkMode() {
@@ -156,3 +156,6 @@ function toggleDarkMode() {
     updateBodyBackground();
     updateView();
 }
+
+
+document.body.style.backgroundColor = model.app.darkMode ? "" : "";
