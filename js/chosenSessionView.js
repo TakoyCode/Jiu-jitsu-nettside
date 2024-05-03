@@ -45,8 +45,10 @@ function createSessionViewVideos() {
                 <video class="techBox" width="200rem" controls>
                     <source src="${model.data.videos[currentSession.media[i]].mediaPath}">
                 </video>
-                <div class="chosenSessionVideoBox">
-                    ${model.data.videos[currentSession.media[i]].name}
+                <div class="chosenSessionVideoBox" style="text-align:center;">
+                    ${model.data.videos[currentSession.media[i]].name}<br>
+                    <p>Mastery: ${getLevelEmoji(model.data.videos[currentSession.media[i]].masteryLevel)}</p>
+                    
                 </div>
             </div>
         `;
