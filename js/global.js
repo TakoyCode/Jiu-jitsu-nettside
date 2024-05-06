@@ -80,7 +80,7 @@ function giveBeltColor() {
 
     switch (model.data.users[0].level) {
         case 1:
-            return 'brownBelt';
+            return 'brownBelt'
 
         case 2:
             return 'blueBelt'
@@ -96,17 +96,6 @@ function giveBeltColor() {
     }
 
 }
-
-/*         for(i = 0; i < video.length; i++) {
-           if(video[i].masteryLevel == 1) average += 0; // Vil ikke denne gjøre at vi aldri treffer max xp?
-           else average += video[i].masteryLevel;
-       } 
-    let average = 0;
-    for (i = 0; i < video.length; i++) {
-        average += video[i].masteryLevel;
-    }
-    average = average / video.length;
-    console.log(average); */
 
 
 function calculateMaxMastery() {
@@ -124,25 +113,25 @@ function calculateMaxMastery() {
             else if (videos[i].masteryLevel == 2) model.data.belt.oneMaxExp += videos[i].masteryLevel;// Om mastery er 2, tildel 2.
         };
         if (videos[i].relBelt == 2) {
-            if (videos[i].masteryLevel == 0) model.data.belt.twoMaxExp += videos[i].masteryLevel + 1 * 2; // Om mastery er 0, gange opp til 2.
-            else if (videos[i].masteryLevel == 1) model.data.belt.twoMaxExp += videos[i].masteryLevel * 2; // Om mastery er 1, gange opp til 2.
-            else if (videos[i].masteryLevel == 2) model.data.belt.twoMaxExp += videos[i].masteryLevel; // Om mastery er 2, tildel 2.
+            if (videos[i].masteryLevel == 0) model.data.belt.twoMaxExp += videos[i].masteryLevel + 1 * 2; 
+            else if (videos[i].masteryLevel == 1) model.data.belt.twoMaxExp += videos[i].masteryLevel * 2; 
+            else if (videos[i].masteryLevel == 2) model.data.belt.twoMaxExp += videos[i].masteryLevel; 
         };
         if (videos[i].relBelt == 3) {
-            if (videos[i].masteryLevel == 0) model.data.belt.threeMaxExp += videos[i].masteryLevel + 1 * 2; // Om mastery er 0, gange opp til 2
-            else if (videos[i].masteryLevel == 1) model.data.belt.threeMaxExp += videos[i].masteryLevel * 2; // Om mastery er 1, gange opp til 2
-            else if (videos[i].masteryLevel == 2) model.data.belt.threeMaxExp += videos[i].masteryLevel;// Om mastery er 2, tildel 2.
+            if (videos[i].masteryLevel == 0) model.data.belt.threeMaxExp += videos[i].masteryLevel + 1 * 2; 
+            else if (videos[i].masteryLevel == 1) model.data.belt.threeMaxExp += videos[i].masteryLevel * 2; 
+            else if (videos[i].masteryLevel == 2) model.data.belt.threeMaxExp += videos[i].masteryLevel;
 
         };
         if (videos[i].relBelt == 4) {
-            if (videos[i].masteryLevel == 0) model.data.belt.fourMaxExp += videos[i].masteryLevel + 1 * 2; // Om mastery er 0, gange opp til 2
-            else if (videos[i].masteryLevel == 1) model.data.belt.fourMaxExp += videos[i].masteryLevel * 2; // Om mastery er 1, gange opp til 2
-            else if (videos[i].masteryLevel == 2) model.data.belt.fourMaxExp += videos[i].masteryLevel;// Om mastery er 2, tildel 2.
+            if (videos[i].masteryLevel == 0) model.data.belt.fourMaxExp += videos[i].masteryLevel + 1 * 2; 
+            else if (videos[i].masteryLevel == 1) model.data.belt.fourMaxExp += videos[i].masteryLevel * 2; 
+            else if (videos[i].masteryLevel == 2) model.data.belt.fourMaxExp += videos[i].masteryLevel;
         };
         if (videos[i].relBelt == 5) {
-            if (videos[i].masteryLevel == 0) model.data.belt.fiveMaxExp += videos[i].masteryLevel + 1 * 2; // Om mastery er 0, gange opp til 2.
-            else if (videos[i].masteryLevel == 1) model.data.belt.fiveMaxExp += videos[i].masteryLevel * 2; // Om mastery er 1, gange opp til 2.
-            else if (videos[i].masteryLevel == 2) model.data.belt.fiveMaxExp += videos[i].masteryLevel; // Om mastery er 2, tildel 2.
+            if (videos[i].masteryLevel == 0) model.data.belt.fiveMaxExp += videos[i].masteryLevel + 1 * 2; 
+            else if (videos[i].masteryLevel == 1) model.data.belt.fiveMaxExp += videos[i].masteryLevel * 2; 
+            else if (videos[i].masteryLevel == 2) model.data.belt.fiveMaxExp += videos[i].masteryLevel; 
         };
     };
 }
@@ -150,7 +139,7 @@ function calculateMaxMastery() {
 
 updateBodyBackground()
 function updateBodyBackground() {
-    document.body.style.backgroundColor = model.app.darkMode ? "rgb(27, 27, 27)" : "gray"; // Endret
+    document.body.style.backgroundColor = model.app.darkMode ? "rgb(27, 27, 27)" : "gray";
 }
 
 function toggleDarkMode() {
