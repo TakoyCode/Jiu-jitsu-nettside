@@ -28,26 +28,28 @@ function createNavBar() {
     calculateAverageMastery();
     return /*HTML*/ `
     <div class="navBar-wrap">
-    <div class="navBar" style="background-color:${model.app.darkMode ? "white" : "darkslategray"}"> <!-- Endret -->
+    <div class="navBar" style="background-color:${model.app.darkMode ? "rgb(65, 65, 65)" : "darkslategray"}"> <!-- Endret -->
         <div class="navButtonHolder">
             <button onclick="goToPage(null)" class="nav-buttons">Main</button>
             <button onclick="goToPage('sessionView') "class="nav-buttons">Økter</button>
         </div>
         <div class="progressBarContainer">
             <div class="beltLevel ${giveBeltColor()}">${model.data.users[0].level}</div>
-            <div class="progressBarText" style="color:${model.app.darkMode ? "rgb(89, 89, 89);" : "white"};">Prosent til neste nivå</div> <!-- Endret -->
+            <div class="progressBarText" style="color:${model.app.darkMode ? "lightslategray" : "white"};">Prosent til neste nivå</div> <!-- Endret -->
             <div class="progressBarBackground">
                 <div class="progressBar" style="width:${model.data.belt.percentageToNext}%"></div>
             </div>
             <div>${Math.floor(model.data.belt.percentageToNext)}%</div>
-            <div class="dark-mode" onclick="toggleDarkMode()" style="${model.app.darkMode ? "background: linear-gradient(45deg, black 50%, white 50%)":"background: linear-gradient(45deg, white 50%, black 50%);"}"></div>
+            <div class="dark-mode-button" onclick="toggleDarkMode()" style="${model.app.darkMode ? "background: linear-gradient(45deg, black 50%, white 50%)" : "background: linear-gradient(45deg, white 50%, black 50%);"}"></div>
         </div>
-        <div style="${model.app.darkMode ? "":"display:none"}"><img style="${model.app.darkMode ? "":"filter:invert(100%)"}" class="logo-svg" src="${model.app.currentPage == "chosenSessionView" ? "": "mysvg.svg"}"/></div> <!-- Endret -->
+        <div style=""><img style="${model.app.darkMode ? "" : "filter:invert(100%)"}" class="logo-svg" src="${model.app.currentPage == "chosenSessionView" ? "" : "mysvg.svg"}"/></div> <!-- Endret -->
     </div>
     </div>
     
     `;
 }
+
+// ${model.app.darkMode ? "" : "display:none"}
 calculateMaxMastery();
 calculateAverageMastery();
 
@@ -146,9 +148,9 @@ function calculateMaxMastery() {
 }
 
 
-
+updateBodyBackground()
 function updateBodyBackground() {
-    document.body.style.backgroundColor = model.app.darkMode ? "rgb(27, 27, 27)" : "grey"; // Endret
+    document.body.style.backgroundColor = model.app.darkMode ? "rgb(27, 27, 27)" : "gray"; // Endret
 }
 
 function toggleDarkMode() {
@@ -156,6 +158,3 @@ function toggleDarkMode() {
     updateBodyBackground();
     updateView();
 }
-
-
-document.body.style.backgroundColor = model.app.darkMode ? "" : "";

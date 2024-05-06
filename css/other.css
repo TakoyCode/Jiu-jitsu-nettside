@@ -191,7 +191,7 @@
     border-radius: 0.4rem;
 }
 
-.createVideoPreviewBtn{
+.createVideoPreviewBtn {
     margin-bottom: -0.1rem;
     margin-right: 10rem;
     cursor: pointer;
@@ -201,7 +201,34 @@
     padding: 0.5rem;
 }
 
-.createVideoPreviewBtn:hover{
+.createVideoPreviewBtn:hover {
     scale: 1.2;
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.selectVidPage-darkmode {
+    background-color: rgb(65, 65, 65);
+    color: black;
+}
+
+.selectVidPage-lightmode {
+    background-color: rgb(194, 194, 194);
+}
+
+.selectVidPageFilter-darkmode {
+    color: rgb(204, 204, 204);
+}
+
+.selectVidPageFilter-lightmode {
+    color: black;
+}
+
+.createSessionPage-darkmode {
+    background-color: rgb(65, 65, 65);
+    color: rgb(204, 204, 204);
+}
+
+.createSessionPage-lightmode {
+    background-color: rgb(194, 194, 194);
+    color: black
 }

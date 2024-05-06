@@ -14,10 +14,10 @@ function createSessionHtml() {
     return /*Html*/ `
             <div class="centerElements">
                 <div class="centerElements">
-                    <h1 class="createSessionTitle" style="color:${model.app.darkMode ? "":"white"};">Opprett økt</h1>
+                    <h1 class="createSessionTitle" style="color:${model.app.darkMode ? "" : "white"};">Opprett økt</h1>
                     <hr style="width: 23rem;"/>   
                 </div>
-                <div class="createSessionWrapper">
+                <div class="createSessionWrapper" style="background-color: ${model.app.darkMode ? "rgb(65, 65, 65)" : "rgb(194, 194, 194)"}; color: ${model.app.darkMode ? "rgb(204, 204, 204)" : "black"}">
                     <div class="createSessionInputContainer">
                         <div class="createSessionInputDiv">
                             <label>Øktnavn:</label>
@@ -93,7 +93,7 @@ function createSelVideosView() {
 function createSelectVideosHTML() {
     return /*html*/`
         <div class="addVideoBlur">
-            <div class="videoSelContainer">
+            <div class="videoSelContainer ${model.app.darkMode ? "selectVidPage-darkmode" : "selectVidPage-lightmode"}">
                 ${createVideoSelectFilterHtml()}
                 ${createVideoPreviewHtml()}
                 <div class="selectVidPageContainer"></div>
@@ -150,7 +150,7 @@ function createSelectebleVideosHtml() {
 function createVideoSelectFilterHtml() {
     const filterType = model.inputs.filter.category;
     return /*HTML*/ `
-    <div class="selVideoFilter">
+    <div class="selVideoFilter ${model.app.darkMode ? "selectVidPageFilter-darkmode" : "selectVidPageFilter-lightmode"}">
         <button class="createVideoPreviewBtn"onclick="goToPage('createSessionView')">Tilbake</button>
                 <p style="margin-left: 1%">
                     <b>Filter</b>

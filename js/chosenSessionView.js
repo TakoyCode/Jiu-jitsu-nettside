@@ -5,7 +5,7 @@ function chosenSessionView() {
     const session = model.data.users[0].sessions[model.data.chosenSessionIndex]
     html = /*HTML*/`
     ${createNavBar()}
-    <h1 class="chosenSessionHeader" style="color:white;">${session.name}</h1>
+    <h1 class="chosenSessionHeader" style="color:${model.app.darkMode ? "" : "white"}">${session.name}</h1>
     <hr style="width: 20%"/>
 
     <div class="chosenSessionContainer">

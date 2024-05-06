@@ -52,12 +52,12 @@ input {
     height: 2rem;
     border-radius: 2rem;
     border: 0.1rem solid black;
-    background-color: rgb(183, 183, 183);
-    color: rgb(0, 151, 171);
+    color: lightslategray;
 }
 
 .createSessionInputDiv>button:hover {
-    background-color: hsl(0, 0%, 80%);
+    cursor: pointer;
+    filter: brightness(90%);
 }
 
 

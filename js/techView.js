@@ -3,7 +3,7 @@ function techniqueView() {
     let technique = model.data.techniques.find((t) => t.name == model.app.currentTechnique)
     let html = /*HTML*/ `
         ${createNavBar()}
-        <h2 class="techHeader" style="color:white;">${technique.title}</h2>
+        <h2 class="techHeader" style="color:${model.app.darkMode ? "" : "white"};">${technique.title}</h2>
         <hr style="width:20%;"/>
         <div class="techniqueContainer">
         <div>${createTechniqueVideoshtml()}</div>

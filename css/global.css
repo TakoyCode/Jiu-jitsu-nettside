@@ -1,5 +1,6 @@
 body {
-    background-color: grey; /*background-color: #c4c4b1;*/
+    background-color: grey;
+    /*background-color: #c4c4b1;*/
     color: lightslategray;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -17,7 +18,7 @@ body {
     width: 90%;
     height: 4rem;
     margin-top: 2rem;
-    border: 0.15rem solid rgb(113, 113, 113);
+    border: 0.15rem solid rgb(50, 50, 50);
     display: flex;
     align-items: center;
     border-radius: 1rem;
@@ -27,8 +28,8 @@ body {
     width: 7rem;
     height: 2rem;
     margin-right: 3rem;
-    color: rgb(0, 151, 167);
     font-size: 1.4rem;
+    color: lightslategray;
 }
 
 .navButtonHolder {
@@ -131,17 +132,17 @@ body {
     z-index: -10;
 }
 
-.dark-mode {
+.dark-mode-button {
     border-radius: 1rem;
     width: 30px;
     height: 30px;
-    
+
     margin-right: -2.5rem;
     border: 0.1px black solid;
 
 }
 
-.dark-mode:hover {
+.dark-mode-button:hover {
     background: linear-gradient(45deg, white 50%, black 50%);
     scale: 1.1;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.219);
